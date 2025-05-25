@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top10 Blog Grid</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .content {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: scale(1.02);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 15px;
+    }
+
+    .post-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .excerpt {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .sidebar {
+      flex: 1;
+    }
+
+    .sidebar-section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar-section input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    .sidebar-section button {
+      width: 100%;
+      padding: 8px;
+      background-color: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar-section li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar-section a {
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top 10 Verse – Where Every Game Finds Its Rank</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <nav>
+        <a href="#">Home</a>
+        <div class="dropdown">
+          <a href="android.html">Android</a>
+          <div class="dropdown-content">
+           
+          </div>
+       
+          <div class="dropdown">
+            <a href="pc.html">PC</a>
+        </div>
+        <div class="dropdown">
+          <a href="adventure.html">Adventure</a>
+          <div class="dropdown-content">
+            </div>
+        </div>
+        <div class="dropdown">
+          <a href="survival.html">Survival</a>
+          <div class="dropdown-content">
+           </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="openworld.html">Open world</a>
+          <div class="dropdown-content">
+                      </div>
+        </div>
+        <div class="dropdown">
+          <a href="shooting.html">Shooting</a>
+          <div class="dropdown-content">
+            
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+
+  <div class="container">
+    <!-- Blog Posts -->
+    <div class="content">
+      <div class="post-card">
+        
+        <a href="page1/post1.html">
+          <img src="page1/images/1.webp" alt="Post 1">
+        </a>
+        
+        <div class="post-content">
+          <div class="post-title">Top 10 Best Offline Android Games Under 100MB You Must Play in 2025
+
+          </div>
+          <div class="meta">Explore the top 10 offline Android games under 100MB, offering exciting gameplay, stunning graphics, and endless fun—perfect for saving data and playing anywhere, anytime.
+          </div>
+          <div class="excerpt"></div>
+          <a href="post1.html">learn more</a>
+        </div>
+
+      </div>
+
+    
+  <div class="post-card">
+        <a href="page1/post2.html">
+          <img src="page1/post.2/1.avif" alt="Post 2">
+        </a>
+        <div class="post-content">
+          <div class="post-title">🎮 Top 10 Assassin’s Creed Games Under 10 GB</div>
+          <div class="meta">Top 10 Assassin’s Creed Games Under 10 GB — Explore the best lightweight AC titles packed with action, stealth, and history, perfect for low-end PCs and nostalgic gamers.
+
+          </div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+      <div class="post-card">
+        <a href="page1/post3.html"> <img src="page1/post3/1.webp" alt="Post 3"></a>
+        <div class="post-content">
+          <div class="post-title">🎮 Top 10 Adventure Games Under 200MB (2025)</div>
+          <div class="meta">Looking for thrilling adventures without draining your data or device storage? We've handpicked the Top 10 Adventure Games under 200MB that pack gripping stories, clever puzzles, and immersive gameplay into small download sizes. Whether you're exploring mysterious lands, solving ancient riddles, or embarking on epic quests, these lightweight games deliver big excitement on a budget. </div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post4.html"> <img src="page1/post4/1.webp" alt="Post 4"></a>
+        <div class="post-content">
+          <div class="post-title">🎮 Top 10 Offline Adventure Games for Android (2025)</div>
+          <div class="meta">🎮 Top 10 Offline Adventure Games for Android (2025):
+            Explore epic quests and mysterious worlds with these offline Android adventure games under 200MB. No internet needed—just thrilling stories, smart puzzles, and immersive gameplay wherever you go!</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post5.html"> <img src="page1/post5/2.webp" alt="Post 5"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Action Adventure Games Under 1GB (Android – 2025)</div>
+          <div class="meta">Explore the Top 10 Action Adventure Games Under 1GB for Android in 2025. These thrilling games deliver intense action, immersive adventures, and impressive graphics—all while keeping storage use below 1GB. Perfect for gamers on the go!
+</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post6.html"> <img src="page1/post6/1.webp" alt="Post 6"></a>
+        <div class="post-content">
+          <div class="post-title">🔥 Top 10 Survival Games Like Last Day on Earth (Android – 2025)</div>
+          <div class="meta">🔥 Discover the Top 10 Survival Games Like Last Day on Earth for Android in 2025! Packed with crafting, zombie battles, and base-building, these intense survival adventures offer the ultimate challenge under 1GB.
+
+          </div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post7.html"> <img src="page1/post7/1.webp" alt="Post 7"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Zombie Survival Games Under 100MB (Android – 2025)</div>
+          <div class="meta">🧟‍♂️ Explore the Top 10 Zombie Survival Games Under 100MB for Android in 2025! These lightweight yet thrilling games deliver intense zombie action, survival challenges, and gripping gameplay—all without hogging your storage.</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post8.html"> <img src="page1/8/1.jpg" alt="Post 8"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Open World PC Games Under 5GB
+          </div>
+          <div class="meta">Top 10 Open World PC Games Under 5GB
+            Discover the best open-world PC games under 5GB that offer vast exploration, engaging gameplay, and immersive stories—perfect for low-spec systems without compromising fun, freedom, or adventure-packed experiences.</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post9.html"> <img src="page1/9/1.jpg" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Free Survival Games for PC on Steam</div>
+          <div class="meta">Explore the best free survival games on Steam for PC players. From crafting and base-building to zombie hordes and harsh environments, these titles offer thrilling survival experiences without costing a dime.</div>
+          <div class="excerpt">.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="page1/post 10.html"> <img src="page1/10/" alt="Post 10"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>Search Anything</h3>
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Recently Published</h3>
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    &copy; 2025 Top10Verse | All rights reserved.
+  </footer>
+</body>
+</html>
