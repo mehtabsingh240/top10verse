@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://www.top10verse.xyz/</loc>
   </url>
   <url>
-    <lo</url>c>https://www.top10verse.xyz/android.html</loc>
+    <loc>https://www.top10verse.xyz/android.html</loc>
   </url>
   <url>
     <loc>https://www.top10verse.xyz/adventure.html</loc>
@@ -21,8 +20,8 @@
   </url>
   <url>
     <loc>https://www.top10verse.xyz/survival.html</loc>
- </url>
- <url>
-  <loc>https://www.top10verse.xyz/page1/post%2010.html</loc>
+  </url>
+  <url>
+    <loc>https://www.top10verse.xyz/page1/post%2010.html</loc>
   </url>
 </urlset>
