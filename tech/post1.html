@@ -6,17 +6,88 @@
   <title>Top 10 Free Apps for PDF Editing</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background-color: #f5f5f5; color: #333; }
-    header, footer { background-color: #006699; color: white; text-align: center; padding: 20px; }
+    header, footer { background-color:black; color: white; text-align: center; padding: 20px; }
     main { padding: 20px; max-width: 900px; margin: auto; }
     section { background: white; margin-bottom: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    h1, h2 { color: #006699; }
+    h1 { color: white; }
     p { line-height: 1.6; }
-  
+  h2{color: black;}
     header {
       background: #111;
       color: #fff;
       padding: 20px 10px;
       text-align: center;
+    }
+    .sidebar {
+      flex: 1;
+    }
+
+    .sidebar-section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar-section input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    .sidebar-section button {
+      width: 100%;
+      padding: 8px;
+      background-color: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar-section li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar-section a {
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
     }
 
     .navbar {
@@ -78,49 +149,17 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    .sidebar {
-      flex: 1;
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin-top: 20px;
-      border-left: 1px solid #ccc;
-    }
-
-    .sidebar h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .sidebar ul li {
-      margin: 8px 0;
-    }
-
-    .sidebar ul li a {
-      text-decoration: none;
-      color: #007bff;
-      transition: color 0.3s;
-    }
-
-    .sidebar ul li a:hover {
-      color: #0056b3;
-    }
   </style>
   <div class="navbar">
     <div class="logo">Top10Verse</div>
     <nav>
-       <a href="https://www.top10verse.xyz/index.html">Home</a>
-      <a href="https://www.top10verse.xyz/Games.html">Games</a>
-      <a href="https://www.top10verse.xyz/apps.html">Apps</a>
-      <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
-      <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
-      <a href="https://www.top10verse.xyz/Health.html">Health</a>
-      <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+      <a href="index.html">Home</a>
+      <a href="Games.html">Games</a>
+      <a href="apps.html">Apps</a>
+      <a href="Tech.html">Tech</a>
+      <a href="Movies.html">Movies</a>
+      <a href="Health.html">Health</a>
+      <a href="Careers.html">Careers</a>
           
         </div>
       </div>
