@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Results - Top10Verse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #222;
+    }
+
+    header p {
+      margin-top: 5px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.015);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top 10 Verse – Where Everything Finds Its Rank</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="Tech.html">Tech</a>
+        <a href="Movies.html">Movies</a>
+        <a href="Health.html">Health</a>
+        <a href="Careers.html">Careers</a>
+      </nav>
+    </div>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+
+  <h1>Search Results</h1>
+  <div id="results" class="grid"></div>
+
+  <script>
+    const posts = [
+      {
+        title: "Top 10 Best Offline Android Games Under 100MB You Must Play in 2025",
+        img: "games/images/post1/1.webp", // Local path or change to hosted URL
+        url: "/android-games-2025.html",
+        desc: "Explore the top 10 offline Android games under 100MB, offering exciting gameplay, stunning graphics, and endless fun—perfect for saving data and playing anywhere, anytime."
+      },
+      {
+        title: "Top 10 Fruits for Glowing Skin and Hair Growth",
+        img: "https://www.top10verse.xyz/images/fruits-glow.jpg",
+        url: "/fruits-glow-hair.html",
+        desc: "Top 10 Fruits for Glowing Skin and Hair Growth highlights nutrient-rich fruits that enhance beauty from within. Packed with vitamins, they support radiant skin and healthy hair."
+      },
+      {
+        title: "Top 10 Best Apps to Learn Coding for Beginners",
+        img: "https://www.top10verse.xyz/images/learn-coding.jpg",
+        url: "/coding-apps-beginners.html",
+        desc: "Explore the top 10 beginner-friendly coding apps that make learning programming fun and interactive, from Python to web development, with lessons and project tracking."
+      },
+      
+      {
+        title: "Top 10 Wireless Earbuds under ₹1500",
+        img: "https://www.top10verse.xyz/images/earbuds-1500.jpg",
+        url: "/earbuds-under-1500.html",
+        desc: "Check out the top wireless earbuds under ₹1500 in 2025, with clear sound, good battery, and Bluetooth connectivity—great for music lovers and casual users."
+      },
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+    
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+      {
+        title: "",
+        img: "",
+        url: "",
+        desc: ""
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ];
+
+    const query = new URLSearchParams(window.location.search).get("q")?.toLowerCase();
+    const resultsDiv = document.getElementById("results");
+
+    if (query) {
+      let matchCount = 0;
+      posts.forEach(post => {
+        if (post.title.toLowerCase().includes(query) || post.desc.toLowerCase().includes(query)) {
+          matchCount++;
+          resultsDiv.innerHTML += `
+            <div class="card">
+              <a href="${post.url}">
+                <img src="${post.img}" alt="${post.title}">
+              </a>
+              <div class="card-content">
+                <a href="${post.url}" class="card-title">${post.title}</a>
+                <p class="card-desc">${post.desc}</p>
+              </div>
+            </div>
+          `;
+        }
+      });
+
+      if (matchCount === 0) {
+        resultsDiv.innerHTML = `<p style="padding: 30px; text-align: center;">No results found for "<strong>${query}</strong>".</p>`;
+      }
+    } else {
+      resultsDiv.innerHTML = `<p style="padding: 30px; text-align: center;">Please enter a search term.</p>`;
+    }
+  </script>
+</body>
+</html>
