@@ -221,13 +221,100 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+ /* Navbar */
+ .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Top 10 Verse – Where Every Game Finds Its Rank</h1>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
     <div class="navbar">
       <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
       <nav>
         <a href="index.html">Home</a>
         <a href="Games.html">Games</a>
@@ -236,46 +323,131 @@
         <a href="Movies.html">Movies</a>
         <a href="Health.html">Health</a>
         <a href="Careers.html">Careers</a>
-            
-          </div>
-        </div>
       </nav>
     </div>
-    
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="Games.html">Games</a>
+      <a href="apps.html">Apps</a>
+      <a href="Tech.html">Tech</a>
+      <a href="Movies.html">Movies</a>
+      <a href="Health.html">Health</a>
+      <a href="Careers.html">Careers</a>
+    </div>
     <p>Explore top 10s across games, gadgets, apps, and more</p>
   </header>
-
   <div class="container">
     <!-- Blog Posts -->
     <div class="content">
-      
-        <div class="post-card">
-            <a href="post.11.html"> <img src="" alt=""></a>
-            <div class="post-content">
-              <div class="post-title"></div>
-              <div class="meta">
-              </div>
-              <div class="excerpt"></div>
-            </div>
-          </div>
+     
+<div class="post-card">
+  <a href="post.11.html"> <img src="images/1.webp" alt=""></a>
+  <div class="post-content">
+    <div class="post-title">🎮 Top 10 Puzzle Games For Android</div>
+    <div class="meta">
+    </div>
+    <div class="excerpt">Discover the top 10 puzzle games for Android that challenge your mind, boost creativity, and offer hours of fun. Perfect for all ages, these games blend strategy, logic, and entertainment seamlessly.</div>
+  </div>
+</div>
 
+    
       <div class="post-card">
-        <a href=""> <img src="" alt=""></a>
+        <a href=""> <img src="" alt="Post 9"></a>
         <div class="post-content">
           <div class="post-title"></div>
-          <div class="meta">
-          </div>
+          <div class="meta"></div>
           <div class="excerpt"></div>
         </div>
       </div>
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href=""> <img src="" alt="Post 9"></a>
+        <div class="post-content">
+          <div class="post-title"></div>
+          <div class="meta"></div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-section">
-        <h3>Search Anything</h3>
-        <input type="text" placeholder="Search...">
-        <button>Search</button>
+        <form id="searchForm" action="/search.html" method="GET">
+          <input type="text" id="searchInput" name="q" placeholder="Search..." required>
+          <button type="submit">Search</button>
+        </form>
+      </div>
       </div>
 
       <div class="sidebar-section">
@@ -323,15 +495,15 @@
       cursor: default;
     }
   </style>
-  
-  <div class="pagination">
-    <a href="#" class="active">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <span>...</span>
-    <a href="#">223</a>
-    <a href="#">&gt;</a>
-  </div>
+ <div class="pagination">
+  <a href="https://www.top10verse.xyz/Games.html" data-page="1">1</a>
+  <a href="page2.html" data-page="2">2</a>
+  <a href="" data-page="3">3</a>
+  <a href="" data-page="3">4</a>
+  <a href="" data-page="50">50</a>
+  <a href="">&gt;</a>
+</div>
+
   
   <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
@@ -376,6 +548,5 @@
       <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
     </div>
   </footer>
-  
 </body>
 </html>
