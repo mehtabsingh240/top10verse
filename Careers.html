@@ -209,29 +209,119 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+ /* Navbar */
+ .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Top 10 Verse – Where Every Game Finds Its Rank</h1>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
     <div class="navbar">
       <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
       <nav>
-       
-          <a href="index.html">Home</a>
-          <a href="Games.html">Games</a>
-          <a href="apps.html">Apps</a>
-          <a href="Tech.html">Tech</a>
-          <a href="Movies.html">Movies</a>
-          <a href="Health.html">Health</a>
-          <a href="Careers.html">Careers</a>
-      
-            
-          </div>
-        </div>
+        <a href="index.html">Home</a>
+        <a href="Games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="Tech.html">Tech</a>
+        <a href="Movies.html">Movies</a>
+        <a href="Health.html">Health</a>
+        <a href="Careers.html">Careers</a>
       </nav>
     </div>
-    
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="Games.html">Games</a>
+      <a href="apps.html">Apps</a>
+      <a href="Tech.html">Tech</a>
+      <a href="Movies.html">Movies</a>
+      <a href="Health.html">Health</a>
+      <a href="Careers.html">Careers</a>
+    </div>
     <p>Explore top 10s across games, gadgets, apps, and more</p>
   </header>
 
