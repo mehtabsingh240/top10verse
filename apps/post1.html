@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 10 Productivity Apps for iPhone 2025</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .game-block {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .game-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .game-block h2 {
+      margin: 10px 0 5px;
+      color: #007bff;
+      font-size: 20px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .description {
+      font-size: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #007bff;
+      color: #fff;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .download-btn:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Desktop layout */
+    @media (min-width: 900px) {
+      .main-container {
+        flex-direction: row;
+        gap: 20px;
+      }
+      .game-block {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .game-block img {
+        width: 300px;
+        height: 170px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .game-details {
+        padding-left: 20px;
+      }
+    }
+
+    /* Popular Picks Section */
+    .horizontal-picks {
+      background-color: #f8fbfe;
+      padding: 20px;
+      border-radius: 14px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    .picks-title {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .picks-title h2 {
+      font-size: 20px;
+      color: #1a1a1a;
+      margin: 0;
+    }
+    .picks-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding: 20px;
+    }
+    .picks-row li {
+      flex: 0 0 auto;
+      list-style: none;
+    }
+    .picks-row a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #eef4fa;
+      color: #111;
+      text-decoration: none;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      min-width: 180px;
+      text-align: center;
+      height: 100px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .picks-row a img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+    .picks-row a:hover {
+      background-color: #d9ecff;
+      transform: translateY(-2px);
+    }
+     /* Navbar */
+     .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="Tech.html">Tech</a>
+        <a href="Movies.html">Movies</a>
+        <a href="Health.html">Health</a>
+        <a href="Careers.html">Careers</a>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="Games.html">Games</a>
+      <a href="apps.html">Apps</a>
+      <a href="Tech.html">Tech</a>
+      <a href="Movies.html">Movies</a>
+      <a href="Health.html">Health</a>
+      <a href="Careers.html">Careers</a>
+    </div>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+
+<!-- Boxes section stays unchanged -->
+<section style="padding: 40px 20px; background-color: #f7f9fc;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;"></h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; max-width: 1200px; margin: auto;">
+    <!-- Box placeholders -->
+    <div style="flex: 1 1 300px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center;">
+      <img src="" alt="What is Coding?" style="width: 100%; max-width: 250px; height: auto; margin-bottom: 15px;" />
+      <h3></h3>
+      <p style="font-size: 15px; line-height: 1.6;"></p>
+    </div>
+    <div style="flex: 1 1 300px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center;">
+      <img src="" alt="Why is Coding Important?" style="width: 100%; max-width: 250px; height: auto; margin-bottom: 15px;" />
+      <h3></h3>
+      <p style="font-size: 15px; line-height: 1.6;"></p>
+    </div>
+    <div style="flex: 1 1 300px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center;">
+      <img src="" alt="Who Should Learn Coding?" style="width: 100%; max-width: 250px; height: auto; margin-bottom: 15px;" />
+      <h3></h3>
+      <p style="font-size: 15px; line-height: 1.6;"></p>
+    </div>
+  </div>
+</section>
+
+<div class="main-container">
+  <div class="content">
+    <div class="game-block">
+      <div class="game-details">
+        <h2>1. Notion – Your All-in-One Productivity Powerhouse</h2>
+        <p class="meta"> </p>
+        <p class="description">Notion is more than just a note-taking app—it’s your second brain. With an estimated size of 80–120 MB, Notion has become a powerful all-in-one productivity suite tailored for iPhone users who love structure and flexibility. In 2025, Notion shines with improved speed, offline support, and an AI assistant baked right into the interface.
+
+          The app allows users to create customized pages with drag-and-drop blocks. Whether you want a minimalist to-do list, a reading journal, or a full business roadmap, you can make it happen in Notion. Its built-in templates—ranging from personal planners to goal trackers—are a huge time-saver. The AI features help summarize notes, generate content, and even organize data intelligently.
+          
+        <h3> Top Features:</h3> 
+      <ul>   
+  <li>  Modular blocks (tables, lists, toggles, embeds)</li>
+          
+  <li> Real-time collaboration and comments</li>
+          
+     <li> Integrated AI for writing, summarizing, and translating</li>
+          
+          <li> Sync with calendars and task apps</li>
+          
+          <li> iCloud and offline sync</li>
+        </ul> 
+          Its elegant interface, full dark mode, and strong community support make it a dream tool for students, remote workers, and creators. Whether you’re journaling or building a company wiki, Notion gives you the freedom to build exactly what you need. </p>
+        <a href="https://apps.apple.com/us/app/notion-notes-tasks-ai/id1232780281" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+
+  <!-- Game 2 -->
+  <div class="game-block">
+    <div class="game-details">
+      <h2>2. Things 3 – Beautiful Task Management Done Right
+      </h2>
+      <p class="meta"> </p>
+      <p class="description">Things 3 is the app you turn to when you want to manage your tasks without feeling overwhelmed. Designed exclusively for Apple devices, this app weighs about 70–90 MB and offers a flawless experience on iPhone, iPad, and Mac.
+
+          In 2025, Things 3 remains a top-tier to-do list app because of its blend of simplicity and power. It’s perfect for professionals who want structure but hate clutter. You can create tasks, subtasks, deadlines, and recurring reminders in seconds. Everything is arranged intuitively—your "Today" tab shows what's urgent, while your "Upcoming" tab lets you plan ahead without stress.
+          
+          Top Features:
+          
+          <li> Simple drag-and-drop interface</li>
+          
+          <li> Project and area management (e.g., Work, Personal)</li>
+          
+          <li> Calendar integration for deadline awareness</li>
+          
+          <li> Natural language input for quick task creation</li>
+          
+          <li> Focus mode with minimal distractions</li>
+          
+          One standout feature is its ability to integrate with Siri and Apple Shortcuts. You can say “Remind me to email the client tomorrow” and it’s done. The sync between Mac and iPhone is buttery-smooth, so switching devices is seamless.
+          
+          While Things 3 is a premium app with a one-time cost, its polish, speed, and sheer usability make it a long-term companion for anyone serious about productivity. It’s not just a to-do list—it’s a workflow tool. </p>
+      <a href="" class="download-btn" target="_blank">Download</a>
+    </div>
+  </div>
+
+
+  <div class="game-block">
+      <div class="game-details">
+        <h2>3. Spark Mail – Email That Works for You
+      </h2>
+        <p class="meta"> Spark Mail by Readdle is a game-changer for those drowning in emails. Weighing around 150 MB, it’s a bit heavier than other apps, but that’s because it packs in smart features that transform email into a tool—not a chore.
+
+          Spark’s magic lies in its Smart Inbox, which prioritizes important emails and pushes distractions to the background. In 2025, Spark comes with new team collaboration features, AI-powered writing assistance, and better calendar integration. You can even draft an email together with teammates in real-time, like Google Docs but for email.
+          
+          Top Features:
+          
+          <li> Smart inbox with filters (Personal, Notifications, Newsletters)</li>
+          
+          <li>>Email scheduling, snooze, and follow-up reminders</li>
+          
+          <li> Built-in AI for drafting, replying, or summarizing emails</li>
+          
+          <li>  Calendar view for managing meetings</li>
+          
+          <li>Unified inbox for multiple accounts (Gmail, Outlook, Yahoo)</li>
+          
+          The UI is crisp and modern, and the swipe gestures let you archive or snooze emails with a flick of your thumb. You can pin emails, set follow-up reminders, or share an email thread like a link.
+          
+          For solo professionals, students, and teams who treat email seriously, Spark turns chaos into clarity. It’s free for individuals with optional premium features for teams.</p>
+        <p class="description"> </p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="game-details">
+        <h2>4. Focus To-Do – Pomodoro & Task Manager Combo</h2>
+        <p class="meta"> </p>
+        <p class="description"> Focus To-Do combines the power of the Pomodoro technique with smart task tracking. At around 60–75 MB, it’s a lightweight app that punches above its weight—especially for students, freelancers, and ADHD-focused users.
+
+          You start by adding a task, set a timer (typically 25 minutes), and get to work. After a short break, the cycle repeats. This technique is simple but super effective for deep focus and burnout prevention. In 2025, Focus To-Do features upgraded charts, productivity reports, and cloud sync.
+          
+         <h3> Top Features:</h3>
+          <ul>
+         <li> Custom Pomodoro timers</li>
+          
+         <li> Daily/weekly progress reports</li>
+          
+         <li>Task lists with priority tags and deadlines</li>
+          
+          <li> Distraction blocking during timer sessions</li>
+          
+              <li> Apple Watch support and lock screen widgets</li>
+      
+      
+      </ul>
+          It even shows how many Pomodoros you’ve completed per day—great for habit building. The app also syncs your tasks across iOS, iPadOS, and macOS.
+          
+          If you struggle with staying on task or constantly checking your phone, Focus To-Do helps you stay grounded and aware of your time. It’s like a timer with accountability built-in.
+          
+          </p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="game-block">
+      <div class="game-details">
+        <h2>5. GoodNotes 6 – Digital Note-Taking Masterpiece
+      </h2>
+        <p class="meta"> </p>
+        <p class="description">GoodNotes 6 is the ultimate iOS note-taking app for students, artists, and professionals who prefer writing over typing. It’s around 180 MB and works best with Apple Pencil. The 2025 version introduces better handwriting recognition, multi-tab navigation, and AI summaries for notes.
+
+          You can write in your own handwriting and the app will make it searchable. Notes are stored in beautiful notebooks with customizable covers and paper styles. Whether you’re solving math problems, sketching diagrams, or outlining a blog post, it feels natural.
+          
+          Top Features:
+          
+          <li> Handwriting-to-text conversion</li>
+          
+          <li> Digital notebooks with folders and tabs</li>
+          
+          <li> Audio recording synced with written notes</li>
+          
+          <li> PDF annotation and document scanning</li>
+          
+          <li> Collaboration support for real-time group notes</li>
+          
+          
+          With full iCloud sync, your notebooks travel between devices effortlessly. Whether you’re in a lecture or business meeting, GoodNotes keeps your thoughts organized and accessible. </p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+
+    <div class="game-block">
+      <div class="game-details">
+        <h2>6. Todoist</h2>
+        <p class="meta"> </p>
+        <p class="description">     Todoist is a beautifully designed to-do list app built to help you get more done. At just about 100MB, it’s lightweight but packed with functionality. It offers everything from quick task capture to full project planning, all synced across iPhone, iPad, and desktop. In 2025, the app introduces deeper AI suggestions and natural language recognition for faster task input. The “Today” and “Upcoming” tabs keep you focused, and recurring tasks help automate your daily grind. Its clean, minimalist interface is a joy to use. Productivity charts and karma points give you a motivational push, while label and filter systems help organize everything without chaos.</p>
+          <h3>Top Features:</h3>
+          <ul>
+            <li>Quick task capture with natural language</li>
+            <li>Recurring tasks and reminders</li>
+            <li>Labels, filters, and priorities</li>
+            <li>Collaborative project support</li>
+            <li>AI-powered task suggestions</li>
+          </ul></p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+
+
+  
+    <div class="game-block">
+      <div class="game-details">
+        <h2>7. Spark Mail </h2>
+        <p class="meta"> </p>
+        <p class="description">Spark Mail is built for those who feel overwhelmed by email. Its Smart Inbox automatically categorizes emails into Personal, Notifications, and Newsletters, so you see what matters first. In 2025, Spark introduces a built-in AI writing assistant to help you respond quickly with polite, personalized emails. You can snooze messages, schedule sends, and set follow-up reminders. It even allows collaborative drafting—perfect for teams. The interface is sleek, with powerful swipe gestures and custom inbox filters. Spark works with all major email providers and syncs across iCloud. If you’re drowning in a sea of unread messages, Spark offers clarity, speed, and smart handling to reclaim your inbox and your time.    </p>
+          <h3>Top Features:</h3>
+          <ul>
+            <li>Smart Inbox categories</li>
+            <li>AI-assisted email replies
+            
+            </li>
+            <li>Send later and email scheduling
+            
+            </li>
+            <li>Email collaboration tools
+            
+            </li>
+            <li>Unified inbox with swipe actions
+            
+            </li>
+          </ul></p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+  
+    <div class="game-block">
+      <div class="game-details">
+        <h2>8. Forest </h2>
+        <p class="meta"> </p>
+        <p class="description">Forest is a uniquely motivating productivity app that rewards focus with something beautiful: trees. Every time you stay off your phone and stay focused, you grow a tree. Keep focusing and you’ll grow a forest. But if you leave the app? Your tree dies. In 2025, Forest adds Focus Modes and daily goal settings. The app now syncs with Apple Health and your calendar. It’s not just a gimmick—Forest encourages mindfulness by turning your time into something visual and satisfying. You can even plant real trees via their partnership with Trees for the Future. Forest is ideal for students, freelancers, or anyone who wants to develop healthier digital habits in a fun, guilt-free way.    </p>
+          <h3>Top Features:</h3>
+          <ul>
+            <li>Focus timer with tree growth</li>
+            <li>Real tree planting partnership</li>
+            <li>Daily goal setting and reports
+            
+            </li>
+            <li>Apple Health integration
+            
+            </li>
+            <li>Gamified productivity experience
+            
+            </li>
+          </ul></p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+  
+    <div class="game-block">
+      <div class="game-details">
+        <h2>9. Microsoft OneNote</h2>
+        <p class="meta"> </p>
+        <p class="description">OneNote is like an endless digital notebook designed for capturing everything—text, images, voice, or ideas. With its section-tab layout, it's perfect for organizing class notes, project planning, or brainstorming sessions. In 2025, OneNote supports real-time AI summaries, ink-to-text for 90+ languages, and tighter syncing with Microsoft Teams. You can embed Excel sheets, audio files, and even task checklists into a page. Everything is searchable—even handwritten notes. Its collaboration features allow shared notebooks where teams or classmates can contribute. OneNote feels familiar, yet powerful—especially for users within the Microsoft ecosystem. Whether you’re outlining a novel or preparing for exams, it gives you a structured place to think big.    </p>
+          <h3>Top Features:</h3>
+          <ul>
+            <li>Infinite page canvas with tabbed notebooks</li>
+            <li>AI-generated summaries and text conversion
+            
+            </li>
+            <li>Full Microsoft 365 integration
+            
+            </li>
+            <li>Handwriting search and audio recording
+            
+            </li>
+            <li>Real-time sync and team collaboration
+            
+            </li>
+          </ul></p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+
+
+    
+    <div class="game-block">
+      <div class="game-details">
+        <h2>10. Google Keep</h2>
+        <p class="meta"> </p>
+        <p class="description"> Google Keep is the quickest way to capture ideas, reminders, and to-dos. Its sticky note style makes it instantly usable—no setup or learning curve. Voice notes, checklists, photos, and color-coded labels help you remember what matters. Keep integrates perfectly with Gmail and Google Calendar, so you can pin important notes or set location-based reminders. In 2025, Google Keep includes AI Highlights, which auto-summarize long notes, and Shared Reminders that ping multiple people. Lightweight and lightning-fast, it's ideal for jotting down spontaneous thoughts or organizing shopping lists. If you're already in Google’s ecosystem, Keep will feel like an extension of your brain.</p>
+          <h3>Top Features:</h3>
+          <ul>
+            <li>Voice notes and photo integration
+            
+            </li>
+            
+            
+            <li>Color-coded note organization
+            </li>
+            <li>
+            AI Highlights and summarization
+            
+            
+            </li>
+            <li>
+            Location and time-based reminders
+            
+            
+            </li>
+            <li>
+            Instant sync with Google services
+            
+            
+            </li>
+          </ul></p>
+        <a href="" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+
+  </div>
+</aside>
+</div>
+
+
+
+</body>
+</html>
+  </div>
+</div>
+
+<aside class="horizontal-picks">
+  <div class="picks-title"><h2>Popular Picks</h2></div>
+  <ul class="picks-row">
+    <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/1A1A1A/code.png" alt="Coding"><span>10 productivity apps for iPhone</span></a></li>
+    <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/1A1A1A/pdf.png" alt="PDF"><span>Top 10 Free PDF Tools</span></a></li>
+    <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/1A1A1A/student-male.png" alt="Student"><span>Time Management Apps</span></a></li>
+    <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/1A1A1A/computer-support.png" alt="Gadget"><span>Tech Gadgets 2025</span></a></li>
+    <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/1A1A1A/smartphone.png" alt="Phone"><span>Best VPN Apps</span></a></li>
+  </ul>
+</aside>
+
+<footer>&copy; 2025 Top10Verse. All rights reserved.</footer>
+
+</body>
+</html>
