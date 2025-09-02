@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 10 Offline Android Games Under 100MB (2024–2025)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content {
+      flex: 3;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 1px solid #ccc;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #0056b3;
+    }
+
+    .game-block {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .game-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .game-block h2 {
+      margin: 10px 0 5px;
+      color: #007bff;
+      font-size: 20px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .description {
+      font-size: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #007bff;
+      color: #fff;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .download-btn:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @media (min-width: 900px) {
+      .main-container {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .sidebar {
+        margin-top: 0;
+      }
+
+      .game-block {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .game-block img {
+        width: 300px;
+        height: 170px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .game-details {
+        padding-left: 20px;
+      }
+    }
+  /* Navbar */
+  .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="Tech.html">Tech</a>
+        <a href="Movies.html">Movies</a>
+        <a href="Health.html">Health</a>
+        <a href="Careers.html">Careers</a>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="Games.html">Games</a>
+      <a href="apps.html">Apps</a>
+      <a href="Tech.html">Tech</a>
+      <a href="Movies.html">Movies</a>
+      <a href="Health.html">Health</a>
+      <a href="Careers.html">Careers</a>
+    </div>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+
+  <div class="main-container">
+    <div class="content">
+      <!-- Game blocks go here -->
+      <div class="game-block">
+        <img src="images/post.2/1.avif" alt="Assassin’s Creed II	">
+        <div class="game-details">
+          <h2>Assassin’s Creed II	</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed II is an action-adventure game developed by Ubisoft Montreal and released in 2009. The game is set in Renaissance Italy and follows Ezio Auditore’s journey across cities like Florence and Venice, blending stealth, parkour, and combat in an open-world environment. The game requires around 8 GB of storage space on PC. It was praised for its engaging story, historical detail, and improved gameplay mechanics over its predecessor. Ubisoft Montreal expanded its development team significantly for this title, tripling in size compared to the first game.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+      <!-- Repeat similar game-blocks for more games -->
+    
+    
+      <div class="game-block">
+        <img src="images/post.2/2.avif" alt="Assassin’s Creed Brotherhood		">
+        <div class="game-details">
+          <h2>Assassin’s Creed Brotherhood		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed: Brotherhood is an action-adventure game developed by Ubisoft Montreal and released in 2010. The game is set in Renaissance-era Rome and continues Ezio Auditore’s story as he leads the Assassin Brotherhood against the Templars. It blends stealth, parkour, and combat in an expansive open-world environment. The game requires around 8 GB of storage space on PC. It was praised for its rich setting, refined mechanics, and the introduction of multiplayer. Ubisoft Montreal further expanded its team for this installment, building on the success of Assassin’s Creed II.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+    
+      <div class="game-block">
+        <img src="images/post.2/3.avif" alt="Assassin’s Creed Revelations		">
+        <div class="game-details">
+          <h2>Assassin’s Creed Revelations		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed: Revelations is an action-adventure game developed by Ubisoft Montreal and released in 2011. The game is set in Constantinople during the Ottoman Empire and concludes Ezio Auditore’s journey while also tying in the story of Altair. It features a blend of stealth, parkour, and combat in an open-world environment. The game requires around 9 GB of storage space on PC. It was praised for its emotional depth, cinematic storytelling, and new gameplay additions like the hookblade. Ubisoft Montreal collaborated with multiple studios worldwide to enhance the game's scope and quality.
+
+          </p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <div class="game-block">
+        <img src="images/post.2/4.avif" alt=" Assassin’s Creed IV: Black Flag (Highly Compressed)		">
+        <div class="game-details">
+          <h2>Assassin’s Creed IV: Black Flag (Highly Compressed)		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed IV: Black Flag is an action-adventure game developed by Ubisoft Montreal and released in 2013. Set during the Golden Age of Piracy, it follows Edward Kenway, a pirate and Assassin, across the Caribbean in a vast open world filled with naval combat, stealth, and exploration. The standard PC version requires around 25 GB of storage, but highly compressed versions can reduce this to approximately 8–10 GB. The game was acclaimed for its expansive naval gameplay, rich environments, and compelling pirate narrative. Ubisoft Montreal worked with several global studios to deliver this ambitious title.
+
+          </p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <div class="game-block">
+        <img src="images/post.2/5.avif" alt="Assassin’s Creed III	">
+        <div class="game-details">
+          <h2>Assassin’s Creed III	</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed III is an action-adventure game developed by Ubisoft Montreal and released in 2012. The game is set during the American Revolution and follows Connor Kenway, a half-Mohawk, half-British Assassin, as he fights for freedom in a sprawling open world covering cities, forests, and battlefields. The game requires around 17 GB of storage space on PC. It was praised for its historical setting, dynamic weather, and improved combat mechanics. Ubisoft Montreal utilized a new game engine and collaborated with multiple studios to revamp the series’ core systems and introduce naval gameplay for the first time.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <div class="game-block">
+        <img src="images/post.2/6.avif" alt="Assassin’s Creed Rogue		">
+        <div class="game-details">
+          <h2>Assassin’s Creed Rogue		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed Rogue is an action-adventure game developed by Ubisoft Sofia and released in 2014. Set during the Seven Years’ War, it follows Shay Patrick Cormac, a former Assassin who turns Templar, offering a unique perspective on the series' lore. The game combines stealth, exploration, and naval combat across North America, the Atlantic, and the Arctic. It requires around 12 GB of storage space on PC. The game was praised for its darker storyline, engaging naval missions, and narrative twist. Ubisoft Sofia led development with support from other Ubisoft studios, bridging the gap between AC III and Black Flag.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+
+      <div class="game-block">
+        <img src="images/post.2/7.jpg" alt="Assassin’s Creed (Original)		">
+        <div class="game-details">
+          <h2>Assassin’s Creed (Original)		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed is an action-adventure game developed by Ubisoft Montreal and released in 2007. Set during the Third Crusade in the Holy Land, it follows Altaïr Ibn-La'Ahad, a skilled Assassin working to stop both sides of the conflict from abusing power. The game introduced a blend of stealth, parkour, and combat in a semi-open world featuring cities like Jerusalem, Acre, and Damascus. It requires around 8 GB of storage space on PC. Praised for its innovative gameplay and historical atmosphere, the game laid the foundation for the franchise. Ubisoft Montreal led development with a relatively small core team.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+
+      <div class="game-block">
+        <img src="images/post.2/11.avif" alt="Assassin’s Creed Liberation (HD)		">
+        <div class="game-details">
+          <h2>Assassin’s Creed Liberation (HD)		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed Liberation HD is an action-adventure game developed by Ubisoft Sofia and released in 2014 as an enhanced version of the original PS Vita title. Set in 18th-century New Orleans during the French and Indian War, it follows Aveline de Grandpré, the series’ first female protagonist, as she fights against slavery and oppression. The game blends stealth, parkour, and combat across diverse environments. The HD version requires around 3.5 GB of storage space on PC. It was praised for its unique perspective, improved visuals, and cultural depth. Ubisoft Sofia upgraded graphics and gameplay for home consoles and PC.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+
+      <div class="game-block">
+        <img src="images/post.2/9.avif" alt="Assassin’s Creed Chronicles: India		">
+        <div class="game-details">
+          <h2>Assassin’s Creed Chronicles: India		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed Chronicles: India is a 2.5D action-platformer developed by Climax Studios and released in 2016 under the Ubisoft banner. Set in 19th-century India during the Anglo-Sikh War, the game follows Arbaaz Mir, an Assassin fighting to protect his people and recover a powerful artifact. It combines stealth, acrobatic platforming, and stylized combat in vibrant, hand-painted environments. Requiring around 3.2 GB on PC, the game was praised for its rich art style, historical setting, and challenging gameplay mechanics.</p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+
+      <div class="game-block">
+        <img src="images/post.2/10.webp" alt="Assassin’s Creed Chronicles: China		">
+        <div class="game-details">
+          <h2>Assassin’s Creed Chronicles: China		</h2>
+          <p class="meta"><strong>Genre:</strong> Genre | <strong>Size:</strong> XX MB</p>
+          <p class="description">Assassin’s Creed Chronicles: China is a 2.5D action-platformer developed by Climax Studios and released in 2015 as the first entry in the Chronicles trilogy. Set in 16th-century China during the Ming Dynasty, it follows Shao Jun, a former concubine turned Assassin trained by Ezio Auditore. With around 2.8 GB required on PC, the game features elegant stealth mechanics, precise platforming, and a distinctive ink-brush art style. It was praised for its visual design, historical intrigue, and fast-paced tactical gameplay.
+
+          </p>
+          <a href="https://www.ubisoft.com/en-gb/game/assassins-creed" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+    </div>
+
+ 
+    </div>
+  </aside>
+</div>
+
+
+
+</body>
+</html>
+
+    <aside class="sidebar">
+      <h2>Other Lists</h2>
+      <ul>
+        <li><a href="post3.html"><h3>🎮 Top 10 Adventure Games Under 200MB (2025)</h3></a></li>
+        <li><a href="post1.html"><h3>Top 10 Best Offline Android Games Under 100MB You Must Play in 2025</h3></a></li>
+        <li><a href="post7.html"><h3>Top 10 Zombie Survival Games Under 100MB (Android – 2025)</h3></a></li>
+        <li><a href="post2.html"><h3>🎮 Top 10 Assassin’s Creed Games Under 10 GB</h3></a></li>
+        <li><a href="post5.html"><h3>Top 10 Action Adventure Games Under 1GB (Android – 2025)</h3></a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <!-- About Us -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">About Top10Verse</h3>
+        <p style="line-height: 1.6;">
+          Top10Verse is your go-to platform for discovering top 10 lists across categories like apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+          <li><a href="About Us.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+          <li><a href="Contact Us.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+          <li><a href="Privacy Policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html" style="color: #ccc; text-decoration: none;">Disclaimer</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Contact Us</h3>
+        <p>Email: <a href="mailto:mehtabsingh2k7@gmail.com" style="color: #ccc;">mehtabsingh2k7@gmail.com</a></p>
+        <p>Location: India</p>
+        <p>Available: Mon - Sat, 10AM - 6PM</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Follow Us</h3>
+        <a href="https://www.instagram.com/mehtab_767_/?next=%2Fhghh1152%2F" style="color: #ccc; text-decoration: none; margin-right: 10px;">Instagram</a><br>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div style="text-align: center; border-top: 1px solid #444; margin-top: 30px; padding-top: 20px;">
+      <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
