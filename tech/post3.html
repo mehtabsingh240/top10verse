@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top10Verse – Ultimate Top 10 Lists 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; color: #333; }
+    header, footer { background: #222; color: #fff; text-align: center; padding: 20px; }
+    main { max-width: 1000px; margin: auto; padding: 20px; }
+    section { background: #fff; margin-bottom: 30px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    h2 { color: #0077cc; margin-top: 0; }
+    img { max-width: 100%; height: auto; margin: 10px 0; border-radius: 6px; }
+    p { line-height: 1.6; }
+    h1 { margin-bottom: 10px; }
+    .section-title { font-size: 1.3em; margin-bottom: 10px; color: #006699; }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .sidebar {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 1px solid #ccc;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #0056b3;
+    }
+   /* Navbar */
+   .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+        <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+    </div>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+  
+ 
+  <main>
+
+    <!-- Section: Wireless Earbuds -->
+    <section>
+      <h2 class="section-title">Top 10 Wireless Earbuds under ₹1500</h2>
+
+      <!-- Earbuds 1–5 -->
+      <section>
+        <h2>1. boAt Airdopes Alpha</h2>
+        <p>Amazon & ET list it among top picks under ₹1500. Lightweight design, 10 mm drivers, Bluetooth 5.1, and up to 24 hours of playback offer reliable performance. ASAP Charge means a 5‑minute boost for ~90 minutes of use. Great for drivers or fitness buffs.</p>
+      </section>
+      <section>
+        <h2>2. Noise Buds Uno</h2>
+        <p>Offers balanced audio, HD voice clarity, quad‑mic ENC, ~45‑hour battery, and IPX4 resistance. Includes app support. A favorite pick for everyday commuters.</p>
+      </section>
+      <section>
+        <h2>3. Realme Buds T110</h2>
+        <p>Released mid‑2024 under ₹1100 with Bluetooth 5.3, Google Fast Pair, 28‑hour battery, low‑latency gaming mode, AI‑ENC mics—designed for mixed media use.</p>
+      </section>
+      <section>
+        <h2>4. boAt Airdopes 131</h2>
+        <p>₹800 powerhouse—40‑hour playback, ASAP Charge, 13 mm drivers, Bluetooth 5.1 and touch controls. Excellent battery-life option.</p>
+      </section>
+      <section>
+        <h2>5. Mivi DuoPods C1</h2>
+        <p>Highlights include 45‑hour life, IPX4 protection, Type‑C, clear voice calls with HD driver support. Made in India; smooth daily usage.</p>
+      </section>
+
+      <!-- Earbuds 6–10 -->
+      <section>
+        <h2>6. boAt Airdopes 171</h2>
+        <p>Balanced mids and punchy lows via 10 mm drivers. 25-hour playback, ASAP Charge, IPX4 splash-resistant—₹1,299 value gift.</p>
+      </section>
+      <section>
+        <h2>7. Realme Buds Classic</h2>
+        <p>Wired-like sound, Sound ID adaptation, Bluetooth 5.2, AI voice tech, 32-hour life, foldable and stakeable design for ₹1,499.</p>
+      </section>
+      <section>
+        <h2>8. pTron Bassbuds Duo</h2>
+        <p>Strong 8 mm bass drivers, Bluetooth 5.0, ~20-hour life, fast charging. Budget pick (~₹1,199) with punchy music playback.</p>
+      </section>
+      <section>
+        <h2>9. Redmi Earbuds 2C</h2>
+        <p>Bluetooth 5.2, 7 hours per earbud (+18h case), IPX4, minimal design. ₹1,000 Xiaomi reliability with decent audio.</p>
+      </section>
+      <section>
+        <h2>10. Oraimo Buds Q20</h2>
+        <p>Fast 10‑minute charge gives 180‑minute runtime, Bluetooth 5.3, IP55 dust/water resistance, clear audio for calls—₹1,400 compact pick.</p>
+      </section>
+    </section>
+
+   
+   n>
+    <aside class="sidebar">
+      <h2>Popular Picks</h2>
+      <ul>
+        <li><a href="post3.html"><h3>🎮 Top 10 Adventure Games Under 200MB (2025)</h3></a></li>
+        <li><a href="post1.html"><h3>Top 10 Best Offline Android Games Under 100MB You Must Play in 2025</h3></a></li>
+        <li><a href="post7.html"><h3>Top 10 Zombie Survival Games Under 100MB (Android – 2025)</h3></a></li>
+        <li><a href="post2.html"><h3>🎮 Top 10 Assassin’s Creed Games Under 10 GB</h3></a></li>
+        <li><a href="post5.html"><h3>Top 10 Action Adventure Games Under 1GB (Android – 2025)</h3></a></li>
+      </ul>
+    </aside>
+    
+
+  </main>
+
+   <footer> style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <!-- About Us -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">About Top10Verse</h3>
+        <p style="line-height: 1.6;">
+          Top10Verse is your go-to platform for discovering top 10 lists across categories like apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+          <li><a href="About Us.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+          <li><a href="Contact Us.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+          <li><a href="Privacy Policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html" style="color: #ccc; text-decoration: none;">Disclaimer</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Contact Us</h3>
+        <p>Email: <a href="mailto:mehtabsingh2k7@gmail.com" style="color: #ccc;">mehtabsingh2k7@gmail.com</a></p>
+        <p>Location: India</p>
+        <p>Available: Mon - Sat, 10AM - 6PM</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Follow Us</h3>
+        <a href="https://www.instagram.com/mehtab_767_/?next=%2Fhghh1152%2F" style="color: #ccc; text-decoration: none; margin-right: 10px;">Instagram</a><br>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div style="text-align: center; border-top: 1px solid #444; margin-top: 30px; padding-top: 20px;">
+      <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
