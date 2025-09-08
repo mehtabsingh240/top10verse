@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top 10 Math Solving Apps with Camera Scan</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f8f9fa; margin:0; padding:0; color:#333; }
+    header, footer { background:#2e3b4e; color:#fff; text-align:center; padding:1rem; }
+    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    section { background:#fff; margin-bottom:1.5rem; padding:1rem 1.5rem; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    h2 { color:#203864; }
+    ul { margin:0.5rem 0 0 1rem; }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .sidebar {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 1px solid #ccc;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #0056b3;
+    }
+  /* Navbar */
+  .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+        <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+    </div>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+  
+
+
+<body>
+  <main>
+    <section>
+      <h2>1. Photomath</h2>
+      <p>Photomath uses your camera (or manual input) to instantly recognize and solve math problems—ranging from simple arithmetic to calculus. With detailed, step-by-step walkthroughs, it emphasizes understanding "how" and "why" to reach the answer. The free version covers most basics, while Premium adds extra features like visual explanations.</p>
+      <ul>
+        <li>OCR-powered photo scanning</li>
+        <li>Step-by-step solutions and explanations</li>
+        <li>Works with handwritten and textbook problems</li>
+        <li>Free with optional Premium upgrade</li>
+      </ul>
+    </section>
+
+    <!-- Sections 2–10 below -->
+
+    <section>
+      <h2>2. Mathway</h2>
+      <p>Mathway lets you camera-scan or type problems in algebra, trigonometry, calculus, etc., delivering instant answers. Free users get solutions; premium unlocks detailed steps. Its broad coverage makes it the math equivalent of a Swiss Army knife.</p>
+      <ul>
+        <li>Camera scan + manual entry</li>
+        <li>Covers a wide range of math topics</li>
+        <li>High accuracy; intuitive interface</li>
+        <li>Free answers; premium for step-by-step</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Microsoft Math Solver</h2>
+      <p>Microsoft Math Solver is a robust, free tool that recognizes camera scans, typed input, and handwriting. It handles algebra, calculus, graphing, and units—all with detailed guided steps and neat visuals. Ideal for students wanting a fully free, no-ads experience.</p>
+      <ul>
+        <li>OCR and handwriting recognition</li>
+        <li>Graphing and unit-solving tools</li>
+        <li>Step explanations with visuals</li>
+        <li>Completely free and ad‑free</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Socratic by Google</h2>
+      <p>Socratic by Google scans questions in math (and other subjects) and delivers AI-curated step-by-step solutions. It also includes curated articles and video content (Khan Academy, etc.) to reinforce concepts—great for contextual learning beyond quick answers.</p>
+      <ul>
+        <li>Multi-subject camera scanning</li>
+        <li>Step-by-step math explanations</li>
+        <li>Curated learning resources</li>
+        <li>Free and easy to use</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Cymath</h2>
+      <p>Cymath offers OCR and manual math solving with clear step-by-step solutions. It covers algebra, calculus, and more. The simple, fast interface makes it great for quick math help, and premium removes ads and speeds up access.</p>
+      <ul>
+        <li>Camera + text input</li>
+        <li>Expands through algebra and calculus</li>
+        <li>Clear step breakdowns</li>
+        <li>Free with optional premium version</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. MathMaster</h2>
+      <p>MathMaster tackles camera-scanned math problems—including word problems—and offers 24/7 access to tutoring. It spans curriculum from pre-algebra to calculus, offering step-by-step examples and optional live tutor support.</p>
+      <ul>
+        <li>Word problem scanning and solving</li>
+        <li>Covers all levels up to calculus</li>
+        <li>Access to live tutors</li>
+        <li>Free base level; subscription for more</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. QANDA</h2>
+      <p>QANDA uses camera OCR and AI to solve math problems while offering AI-generated flashcards, micro-lectures, and community Q&A. It’s ideal for students who want an active learning community and personalized revision tools.</p>
+      <ul>
+        <li>OCR-powered scanning</li>
+        <li>Stepwise answers and community Q&A</li>
+        <li>AI flashcards and micro lectures</li>
+        <li>Free with premium content</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. AI Math Scanner</h2>
+      <p>AI Math Scanner is a straight-to-the-point app that lets you scan math problems and get instant solutions. Covering basic arithmetic to algebra, it’s lightweight and fast—great for quick homework checks.</p>
+      <ul>
+        <li>Simple camera-based solver</li>
+        <li>Instant answer display</li>
+        <li>Covers arithmetic and algebra</li>
+        <li>Free and minimal UI</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. Yup</h2>
+      <p>Yup connects you with live tutors via chat. Simply snap a pic of your math problem and chat with a Tutor who walks you through the solution. It supports curriculum from basic math up to AP Calculus and is excellent for personalized guidance.</p>
+      <ul>
+        <li>Submit photo via chat</li>
+        <li>Live tutor assistance</li>
+        <li>Covers up to AP-level math</li>
+        <li>Paid per session or subscription</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>10. Brainly (with scan)</h2>
+      <p>Brainly’s homework app allows students to scan questions—including math problems—and receive peer-generated answers and explanations. Covering multiple subjects, it's community-driven and free, though answer accuracy can vary.</p>
+      <ul>
+        <li>Scan homework via camera</li>
+        <li>Peer-explained answers</li>
+        <li>Covers math, science, and more</li>
+        <li>Free with optional premium for no ads</li>
+      </ul>
+    </section>
+  </main>
+  <aside class="sidebar">
+    <h2>Popular Picks</h2>
+    <ul>
+      <li><a href=""><h3></h3></a></li>
+      <li><a href=""><h3></h3></a></li>
+      <li><a href=""><h3></h3></a></li>
+      <li><a href=""><h3></h3></a></li>
+      <li><a href=""><h3></h3></a></li>
+    </ul>
+  </aside>
+  <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <!-- About Us -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">About Top10Verse</h3>
+        <p style="line-height: 1.6;">
+          Top10Verse is your go-to platform for discovering top 10 lists across categories like apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="/" style="color: #ccc; text-decoration: none;">Home</a></li>
+          <li><a href="/about-us.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+          <li><a href="/contact.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+          <li><a href="/privacy-policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="/disclaimer.html" style="color: #ccc; text-decoration: none;">Disclaimer</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Contact Us</h3>
+        <p>Email: <a href="mailto:support@top10verse.xyz" style="color: #ccc;">support@top10verse.xyz</a></p>
+        <p>Location: India</p>
+        <p>Available: Mon - Sat, 10AM - 6PM</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Follow Us</h3>
+        <a href="#" style="color: #ccc; text-decoration: none; margin-right: 10px;">Facebook</a><br>
+        <a href="#" style="color: #ccc; text-decoration: none; margin-right: 10px;">Instagram</a><br>
+        <a href="#" style="color: #ccc; text-decoration: none; margin-right: 10px;">Twitter</a><br>
+        <a href="#" style="color: #ccc; text-decoration: none;">YouTube</a>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div style="text-align: center; border-top: 1px solid #444; margin-top: 30px; padding-top: 20px;">
+      <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
+    </div>
+  </footer>
+  </body>
+</html>
