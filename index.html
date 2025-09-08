@@ -423,49 +423,79 @@
   </div>
 
 
-  <style>
-    .pagination {
-      text-align: center;
-      margin: 30px 0;
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pagination</title>
+    <style>
+      .pagination {
+        text-align: center;
+        margin: 30px 0;
+      }
+  
+      .pagination a, .pagination span {
+        display: inline-block;
+        padding: 8px 12px;
+        margin: 0 2px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #007bff;
+        background: white;
+        transition: background 0.2s;
+      }
+  
+      .pagination a.active {
+        background: #007bff;
+        color: white;
+        border-color: #007bff;
+      }
+  
+      .pagination a:hover:not(.active) {
+        background: #f0f0f0;
+      }
+  
+      .pagination span {
+        color: #777;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div class="pagination">
+      <a href="Games.html" data-page="1">1</a>
+      <a href="2.html" data-page="2">2</a>
+      <a href="3.html" data-page="3">3</a>
+      <a href="" data-page="4">4</a>
+      <a href="" data-page="50">5</a>
+      <a href="">&gt;</a>
+    </div>
+    
+  
+  <script>
+    // Detect current page from URL
+    const links = document.querySelectorAll('.pagination a[data-page]');
+    let currentPage = 1;
+  
+    const path = window.location.pathname;
+    const filename = path.substring(path.lastIndexOf('/') + 1);
+  
+    if (filename !== 'index.html' && filename !== '') {
+      const match = filename.match(/^(\d+)\.html$/);
+      if (match) {
+        currentPage = parseInt(match[1]);
+      }
     }
   
-    .pagination a, .pagination span {
-      display: inline-block;
-      padding: 8px 12px;
-      margin: 0 2px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      text-decoration: none;
-      color: #007bff;
-      background: white;
-      transition: background 0.2s;
-    }
-  
-    .pagination a.active {
-      background: #007bff;
-      color: white;
-      border-color: #007bff;
-    }
-  
-    .pagination a:hover:not(.active) {
-      background: #f0f0f0;
-    }
-  
-    .pagination span {
-      color: #777;
-      cursor: default;
-    }
-  </style>
-  
-  <div class="pagination">
-    <a href="index.html" data-page="1">1</a>
-    <a href="2.html" data-page="2">2</a>
-    <a href="3.html" data-page="3">3</a>
-    <a href="" data-page="3">4</a>
-    <a href="" data-page="4">50</a>
-    <a href="2.html">&gt;</a>
-  </div>
-  
+    // Highlight current page
+    links.forEach(link => {
+      if (parseInt(link.dataset.page) === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
   <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
       
@@ -520,5 +550,3 @@
   </script>
 </body>
 </html>
-
-
