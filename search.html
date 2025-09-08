@@ -8,28 +8,16 @@
     body {
       font-family: Arial, sans-serif;
       background: #f9f9f9;
-      padding: 0;
       margin: 0;
     }
-
     header {
-      background-color: white;
+      background-color:black;
       padding: 20px;
       text-align: center;
       border-bottom: 1px solid #ddd;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #222;
-    }
-
-    header p {
-      margin-top: 5px;
-      color: #777;
-      font-size: 14px;
-    }
+    header h1 { margin: 0; font-size: 24px; color: white; }
+    header p { margin-top: 5px; color: #777; font-size: 14px; }
 
     .navbar {
       background-color: #333;
@@ -39,29 +27,52 @@
       align-items: center;
       flex-wrap: wrap;
     }
+    .navbar .logo { font-size: 24px; color: #fff; font-weight: bold; }
+    .navbar nav { display: flex; gap: 15px; }
+    .navbar nav a { color: #fff; text-decoration: none; padding: 8px 12px; }
+    .navbar nav a:hover { background-color: #444; border-radius: 5px; }
 
-    .navbar .logo {
-      font-size: 24px;
-      color: #fff;
-      font-weight: bold;
+    .search-bar {
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
     }
-
-    .navbar nav {
-      display: flex;
-      gap: 15px;
-    }
-
-    .navbar nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 12px;
-      transition: background 0.3s;
-    }
-
-    .navbar nav a:hover {
-      background-color: #444;
+    .search-bar input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
       border-radius: 5px;
     }
+    .search-bar button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      background: #333;
+      color: white;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    .search-bar button:hover { background: #444; }
+
+    .suggestions {
+      position: absolute;
+      top: 40px;
+      left: 10%;
+      width: 80%;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      z-index: 10;
+      text-align: left;
+    }
+    .suggestions div {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .suggestions div:hover { background: #f0f0f0; }
 
     .grid {
       display: grid;
@@ -69,7 +80,6 @@
       gap: 20px;
       padding: 30px;
     }
-
     .card {
       background: #fff;
       border-radius: 10px;
@@ -77,79 +87,176 @@
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .card:hover {
-      transform: scale(1.015);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    .card-content {
-      padding: 16px;
-    }
-
+    .card:hover { transform: scale(1.015); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-content { padding: 16px; }
     .card-title {
-      font-size: 17px;
+      font-size: 17px; font-weight: bold; color: #000;
+      text-decoration: none; display: block; margin-bottom: 8px;
+    }
+    .card-desc { font-size: 14px; color: #444; }
+    
+   /* Navbar */
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
       font-weight: bold;
-      color: #000;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
       text-decoration: none;
       display: block;
-      margin-bottom: 8px;
-      line-height: 1.4;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
     }
 
-    .card-desc {
-      font-size: 14px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    h1 {
+    /* Pagination style unchanged */
+    .pagination {
       text-align: center;
-      color: #333;
-      margin-top: 30px;
+      margin: 30px 0;
     }
+    .pagination a, .pagination span {
+      display: inline-block;
+      padding: 8px 12px;
+      margin: 0 2px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      text-decoration: none;
+      color: #007bff;
+      background: white;
+      transition: background 0.2s;
+    }
+    .pagination a.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    .pagination a:hover:not(.active) { background: #f0f0f0; }
+    .pagination span { color: #777; cursor: default; }
   </style>
+  <meta name="google-site-verification" content="7N162RKum3gUuJrdZaZS4qQfjNmGLtziJpW-m925m4M" />
+
 </head>
 <body>
   <header>
-    <h1>Top 10 Verse – Where Everything Finds Its Rank</h1>
+    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
     <div class="navbar">
       <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="Games.html">Games</a>
-        <a href="apps.html">Apps</a>
-        <a href="Tech.html">Tech</a>
-        <a href="Movies.html">Movies</a>
-        <a href="Health.html">Health</a>
-        <a href="Careers.html">Careers</a>
+       <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
       </nav>
+    </div>
+    <div class="mobile-nav">
+     <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
     </div>
     <p>Explore top 10s across games, gadgets, apps, and more</p>
   </header>
 
-  <h1>Search Results</h1>
+  <!-- Search Box -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search top 10s..." autocomplete="off" />
+    <button onclick="performSearch()">Search</button>
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+
+  <h1 style="text-align:center;">Search Results</h1>
   <div id="results" class="grid"></div>
 
   <script>
     const posts = [
       {
         title: "Top 10 Best Offline Android Games Under 100MB You Must Play in 2025",
-        img: "games/images/post1/1.webp", // Local path or change to hosted URL
+        img: "games/images/post1/1.webp",
         url: "/android-games-2025.html",
         desc: "Explore the top 10 offline Android games under 100MB, offering exciting gameplay, stunning graphics, and endless fun—perfect for saving data and playing anywhere, anytime."
       },
       {
         title: "Top 10 Fruits for Glowing Skin and Hair Growth",
-        img: "https://www.top10verse.xyz/images/fruits-glow.jpg",
+        img: "health/images/th.jpg",
         url: "/fruits-glow-hair.html",
         desc: "Top 10 Fruits for Glowing Skin and Hair Growth highlights nutrient-rich fruits that enhance beauty from within. Packed with vitamins, they support radiant skin and healthy hair."
       },
@@ -159,7 +266,6 @@
         url: "/coding-apps-beginners.html",
         desc: "Explore the top 10 beginner-friendly coding apps that make learning programming fun and interactive, from Python to web development, with lessons and project tracking."
       },
-      
       {
         title: "Top 10 Wireless Earbuds under ₹1500",
         img: "https://www.top10verse.xyz/images/earbuds-1500.jpg",
@@ -167,162 +273,31 @@
         desc: "Check out the top wireless earbuds under ₹1500 in 2025, with clear sound, good battery, and Bluetooth connectivity—great for music lovers and casual users."
       },
       {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-    
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-      {
-        title: "",
-        img: "",
-        url: "",
-        desc: ""
-      },
-
-
-
-
-
-
-
-
-
-
-
-
-
+        title: "Top 10 Best Apps to Learn Coding for Beginners",
+        img: "https://www.top10verse.xyz/images/learn-coding.jpg",
+        url: "/coding-apps-beginners.html",
+        desc: "Explore the top 10 beginner-friendly coding apps that make learning programming fun and interactive, from Python to web development, with lessons and project tracking."
+      }
     ];
 
-    const query = new URLSearchParams(window.location.search).get("q")?.toLowerCase();
     const resultsDiv = document.getElementById("results");
+    const searchInput = document.getElementById("searchInput");
+    const suggestionsDiv = document.getElementById("suggestions");
 
-    if (query) {
+    // Function to render search results
+    function renderResults(query) {
+      resultsDiv.innerHTML = "";
+      if (!query) return;
+
+      let queryWords = query.split(" ").map(w => w.toLowerCase());
       let matchCount = 0;
+
       posts.forEach(post => {
-        if (post.title.toLowerCase().includes(query) || post.desc.toLowerCase().includes(query)) {
+        let postWords = post.title.toLowerCase().split(" ");
+        let matches = queryWords.filter(word => postWords.includes(word));
+        
+        // Show post if 3 or more keywords match
+        if (matches.length >= 1 || post.title.toLowerCase().includes(query)) {
           matchCount++;
           resultsDiv.innerHTML += `
             <div class="card">
@@ -341,8 +316,38 @@
       if (matchCount === 0) {
         resultsDiv.innerHTML = `<p style="padding: 30px; text-align: center;">No results found for "<strong>${query}</strong>".</p>`;
       }
-    } else {
-      resultsDiv.innerHTML = `<p style="padding: 30px; text-align: center;">Please enter a search term.</p>`;
+    }
+
+    // Autocomplete suggestions
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.toLowerCase();
+      suggestionsDiv.innerHTML = "";
+      if (!value) return;
+
+      const filtered = posts.filter(post => post.title.toLowerCase().includes(value));
+      filtered.slice(0, 5).forEach(post => {
+        const div = document.createElement("div");
+        div.textContent = post.title;
+        div.onclick = () => {
+          searchInput.value = post.title;
+          suggestionsDiv.innerHTML = "";
+          renderResults(post.title);
+        };
+        suggestionsDiv.appendChild(div);
+      });
+    });
+
+    // Perform search on button click
+    function performSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      renderResults(query);
+    }
+
+    // Load results if query is passed in URL (?q=)
+    const urlQuery = new URLSearchParams(window.location.search).get("q");
+    if (urlQuery) {
+      searchInput.value = urlQuery;
+      renderResults(urlQuery);
     }
   </script>
 </body>
