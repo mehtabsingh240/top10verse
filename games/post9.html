@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 10 Offline Android Games Under 100MB (2024–2025)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content {
+      flex: 3;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 1px solid #ccc;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #0056b3;
+    }
+
+    .game-block {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .game-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .game-block h2 {
+      margin: 10px 0 5px;
+      color: #007bff;
+      font-size: 20px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .description {
+      font-size: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #007bff;
+      color: #fff;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .download-btn:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @media (min-width: 900px) {
+      .main-container {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .sidebar {
+        margin-top: 0;
+      }
+
+      .game-block {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .game-block img {
+        width: 300px;
+        height: 170px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .game-details {
+        padding-left: 20px;
+      }
+    }
+  /* Navbar */
+  .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    .navbar nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #444; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #333;
+    }
+    .mobile-nav a {
+      padding: 10px 20px;
+      border-top: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mobile-nav a:hover { background: #444; }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top 10 Free Survival Games for PC on Steam</h1>
+    <div class="navbar">
+      <div class="logo">Top10Verse</div>
+      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+         <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+       <a href="https://www.top10verse.xyz/index.html">Home</a>
+        <a href="https://www.top10verse.xyz/Games.html">Games</a>
+        <a href="https://www.top10verse.xyz/apps.html">Apps</a>
+        <a href="https://www.top10verse.xyz/Tech.html">Tech</a>
+        <a href="https://www.top10verse.xyz/Movies.html">Movies</a>
+        <a href="https://www.top10verse.xyz/Health.html">Health</a>
+        <a href="https://www.top10verse.xyz/Careers.html">Careers</a>
+    </div>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+  </header>
+
+  <div class="main-container">
+    <div class="content">
+      <!-- Game blocks go here (Game 1 to Game 10) -->
+      <!-- Copy all your existing game-blocks here -->
+      <!-- Example below: -->
+      <div class="game-block">
+        <img src="images/post9/1.jpg" alt="">
+        <div class="game-details">
+          <h2>1. Unturned</h2>
+          <p class="meta">
+          <p class="description"> Unturned drops you into a zombie-infested world where survival is your main goal. You’ll scavenge for food, water, and weapons while trying to avoid or fight off the undead. The game offers a blocky, cartoonish look, but don’t let that fool you — it’s full of deep survival mechanics like health, hunger, and infection. You can build shelters, team up with friends online, or go solo. With regular updates, mod support, and a strong community, Unturned proves you don’t need a big budget for a thrilling survival experience.
+          
+           </p>
+          <a href="https://store.steampowered.com/app/292000/No_More_Room_in_Hell_2/" class="download-btn" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <!-- Add Game 2 to Game 10 here as in your original content -->
+
+    <!-- Game 2 -->
+    <div class="game-block">
+      <img src="images/post9/2.jpg" alt="">
+      <div class="game-details">
+        <h2>2. No More Room in Hell</h2>
+        <p class="description">This is a co-op zombie survival game with dark horror vibes and tough decisions. You and your team must stick together to survive zombie waves, complete missions, and find escape routes. What makes it scary is the realism—there’s no crosshair, ammo is limited, and one wrong step can be deadly. You need teamwork, quick thinking, and good aim to survive. Whether you’re protecting a hospital or escaping a subway station, the intense atmosphere keeps your heart racing from start to finish.
+        
+        </p>
+         <a href="https://store.steampowered.com/app/292000/No_More_Room_in_Hell_2/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 3 -->
+    <div class="game-block">
+      <img src="images/post9/3.jpg" alt="">
+      <div class="game-details">
+        <h2> 3. Fallout Shelter</h2>
+    
+        <p class="description">
+
+          Fallout Shelter puts you in charge of your own underground Vault. You manage everything—power, food, water, and even happiness. Each dweller has unique skills, and it’s your job to assign them tasks, train them, and protect them from dangers like fires, raiders, and radroaches. The game is part survival, part strategy, and it’s incredibly addictive. As you build and upgrade rooms, you’ll unlock more options and face tougher challenges. It’s a calm, offline-friendly game that still makes you think like a real leader.
+          
+          
+          </p>
+        <a href="https://store.steampowered.com/app/588430/Fallout_Shelter/"class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 4 -->
+    <div class="game-block">
+      <img src="images/post9/4.webp" alt="">
+      <div class="game-details">
+        <h2>4. Fistful of Frags</h2>
+        <p class="description">While it’s mainly a Wild West shooter, Fistful of Frags sneaks in survival elements with limited weapons, health recovery zones, and strategic movement. You’ll engage in shootouts with pistols, rifles, and even melee weapons. Ammo is scarce, and every gun reload takes time, so you must plan each move. The game also has a unique balance system where your kill power depends on how risky your actions are. It’s not just fast-paced action — it’s about surviving each duel smartly and stylishly.</p>
+        <a href="https://store.steampowered.com/app/265630/Fistful_of_Frags/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 5 -->
+    <div class="game-block">
+      <img src="images/post9/5.webp" alt="">
+      <div class="game-details">
+        <h2>5. Ylands</h2>
+        <p class="description">Ylands is an exploration-based sandbox survival game with colorful visuals and endless creativity. You start on an island and must gather resources, build shelter, craft tools, and stay alive. Over time, you’ll sail to new islands, encounter different climates, and unlock new crafting recipes. Ylands also has a creative mode where you can build your own worlds or games. It’s perfect for players who enjoy both survival and relaxing creativity. The friendly graphics make it accessible to all ages without losing the survival thrill.
+
+        
+        
+          </p>
+        <a href="https://store.steampowered.com/app/298610/Ylands/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 6 -->
+    <div class="game-block">
+      <img src="images/post9/6.jpg" alt="">
+      <div class="game-details">
+        <h2>6. Vigor</h2>
+        <p class="description">Set in post-war Norway, Vigor throws you into "encounters" where you loot, shoot, and try to escape alive. You can build your shelter, upgrade equipment, and choose whether to fight others or sneak your way to safety. The game’s tension lies in its risk-reward system—go in greedy and you might lose everything. Each session is short, but every choice matters. Whether you play solo or duo, Vigor gives that adrenaline rush of survival, with beautiful snowy landscapes and deep base-building mechanics.
+
+          
+          
+          </p>
+        <a href="https://store.steampowered.com/app/2818260/Vigor/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 7 -->
+    <div class="game-block">
+      <img src="images/post9/7.webp" alt="">
+      <div class="game-details">
+        <h2>7. Notrium></h2>
+        <p class="description">
+          Notrium is an old-school top-down survival game where you crash-land on an alien planet. You pick a character—each with different strengths—and explore deserts, jungles, and icy zones while managing heat, hunger, and threats. It’s more than just collecting items; you’ll need to craft, adapt to the planet’s dangers, and find your way off the planet. The game changes based on choices and has multiple endings. Despite its simple look, it offers rich gameplay for those who enjoy smart survival with a sci-fi twist.
+          
+          
+          </p>
+        <a href="https://store.steampowered.com/app/349100/Notrium/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 8 -->
+    <div class="game-block">
+      <img src="images/post9/8.jpg" alt="">
+      <div class="game-details">
+        <h2>8. UnReal World</h2>
+        <p class="description">
+UnReal World is one of the most detailed survival games ever made, set in Iron Age Finland. You play as a hunter, fisherman, or gatherer, living in a massive world full of forests, lakes, and wildlife. Every choice matters—what to eat, how to dress, and when to travel. The game uses real survival mechanics like temperature, starvation, and injury. There are no quests or forced paths—just your journey of survival and self-reliance. It's text-heavy and slow-paced, but deeply rewarding if you enjoy realism and challenge.
+         
+          
+          </p>
+        <a href="https://store.steampowered.com/app/351700/UnReal_World/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 9 -->
+    <div class="game-block">
+      <img src="images/post9/9.jpg" alt="">
+      <div class="game-details">
+        <h2>9. Mitos.is: The Game</h2>
+        <p class="description">
+
+         
+         Mitos.is is a multiplayer survival game where you play as a tiny cell and grow by eating smaller ones. But there’s a catch—larger cells will try to eat you too. It’s fast, fun, and very competitive. You can split, eject mass, and team up with others to dominate the map. Although it’s more arcade-style than traditional survival, staying alive as long as possible is the main goal. It’s lightweight, addictive, and great for short gaming sessions when you just want to test your survival instincts.
+          </p>
+        <a href="https://store.steampowered.com/app/389570/Mitosis_The_Game/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Game 10 -->
+    <div class="game-block">
+      <img src="images/post9/10.jpg" alt="">
+      <div class="game-details">
+        <h2>10. Once Human (Beta)</h2>
+        <p class="meta">
+        <p class="description">Once Human is an upcoming open-world survival game set in a post-apocalyptic world filled with alien-like threats. It combines base-building, crafting, and exploration with third-person shooting. The world is shared, so you’ll meet other players—some friendly, some hostile. You gather resources, fight strange creatures, and build up your base to survive. Though still in development, it promises a blend of survival, co-op, and story. Its sci-fi atmosphere and dark setting add depth to traditional survival gameplay, making it one to watch.
+        
+        
+          
+          
+          </p>
+        <a href="https://store.steampowered.com/app/2139460/Once_Human/" class="download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+  </div>
+
+
+    </div>
+...
+    </aside>
+  </div>
+
+
+</body>
+</html>
+
+    <aside class="sidebar">
+      <h2>Popular Picks</h2>
+      <ul>
+        <li><a href="post3.html"><h3>🎮 Top 10 Adventure Games Under 200MB (2025)</h3></a></li>
+        <li><a href="post1.html"><h3>Top 10 Best Offline Android Games Under 100MB You Must Play in 2025</h3></a></li>
+        <li><a href="post7.html"><h3>Top 10 Zombie Survival Games Under 100MB (Android – 2025)</h3></a></li>
+        <li><a href="post2.html"><h3>🎮 Top 10 Assassin’s Creed Games Under 10 GB</h3></a></li>
+        <li><a href="post5.html"><h3>Top 10 Action Adventure Games Under 1GB (Android – 2025)</h3></a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <!-- About Us -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">About Top10Verse</h3>
+        <p style="line-height: 1.6;">
+          Top10Verse is your go-to platform for discovering top 10 lists across categories like apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+          <li><a href="About Us.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+          <li><a href="Contact Us.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+          <li><a href="Privacy Policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html" style="color: #ccc; text-decoration: none;">Disclaimer</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Contact Us</h3>
+        <p>Email: <a href="mailto:mehtabsingh2k7@gmail.com" style="color: #ccc;">mehtabsingh2k7@gmail.com</a></p>
+        <p>Location: India</p>
+        <p>Available: Mon - Sat, 10AM - 6PM</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Follow Us</h3>
+        <a href="https://www.instagram.com/mehtab_767_/?next=%2Fhghh1152%2F" style="color: #ccc; text-decoration: none; margin-right: 10px;">Instagram</a><br>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div style="text-align: center; border-top: 1px solid #444; margin-top: 30px; padding-top: 20px;">
+      <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
