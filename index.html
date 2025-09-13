@@ -1,609 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https://www.top10verse.xyz/" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GPFF7J4Z8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2GPFF7J4Z8');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Top10 Blog Grid</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
- 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.top10verse.xyz/" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-  <!-- Title -->
-  <title>Top 10 Blog Grid | Explore Top 10s in Apps, Games, Tech & More</title>
-
-  <!-- Meta Description (150–160 characters) -->
-  <meta name="description" content="Top10Verse shares curated top 10 lists across apps, games, tech, health, careers & more. Discover what's best in every category, updated for 2025.">
-
-  <!-- Meta Keywords (Not as important anymore, but can be included) -->
-  <meta name="keywords" content="Top 10, Best Apps, Top Games 2025, Tech Reviews, Health Tips, Career Options, Top10Verse">
-
-  <!-- Author -->
-  <meta name="author" content="Top10Verse Team">
-
-  <!-- Robots -->
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph Meta Tags (for better social media preview) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.top10verse.xyz/" />
-  <meta property="og:title" content="Top10Verse | Discover the Best in Every Category" />
-  <meta property="og:description" content="Explore top 10 lists across games, apps, gadgets, tech, health & more — curated and updated for 2025." />
-  <meta property="og:image" content="https://www.top10verse.xyz/images/og-banner.jpg" /> <!-- Update with your image -->
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Top10Verse | Discover the Best in Every Category" />
-  <meta name="twitter:description" content="Explore top 10s in every field — apps, games, tech, health & more." />
-  <meta name="twitter:image" content="https://www.top10verse.xyz/images/og-banner.jpg" /> <!-- Update with your image -->
-
-  <!-- Google Verification -->
-  <meta name="google-site-verification" content="7N162RKum3gUuJrdZaZS4qQfjNmGLtziJpW-m925m4M" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GPFF7J4Z8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2GPFF7J4Z8');
-  </script>
-
-  <!-- Styles -->
-  <style>
-    /* ... your CSS remains unchanged ... */
-  </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top10Verse – Discover top 10 lists for games, apps, tech, health, gadgets and more. Curated lists to help you find the best quickly.">
+  <meta name="keywords" content="top 10, games, apps, tech, gadgets, health, reviews, trending, top10verse, lists, guides">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Top10Verse – Curated Top 10 Lists">
+  <meta property="og:description" content="Explore trending top 10 lists for games, apps, tech, and health. Stay updated with Top10Verse for the best recommendations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.top10verse.xyz">
+  <meta property="og:image" content="https://source.unsplash.com/1200x630/?technology">
+  <title>Top10Verse – Curated Top 10 Lists</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      display: flex;
-      gap: 20px;
-      padding: 0 20px;
-    }
-    .content {
-      flex: 3;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .post-card {
-      background: white;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-    .post-card:hover { transform: scale(1.02); }
-    .post-card img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-    }
-    .post-content { padding: 15px; }
-    .post-title {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 8px;
-    }
-    .meta {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 10px;
-    }
-    .excerpt {
-      font-size: 14px;
-      color: #555;
-    }
-    .sidebar { flex: 1; }
-    .sidebar-section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-    }
-    .sidebar-section h3 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .sidebar-section input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-      border-radius: 3px;
-    }
-    .sidebar-section button {
-      width: 100%;
-      padding: 8px;
-      background-color: #1a1a1a;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-    .sidebar-section ul { list-style: none; padding-left: 0; }
-    .sidebar-section li { margin-bottom: 8px; }
-    .sidebar-section a { text-decoration: none; color: #1a1a1a; }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1a1a1a;
-      color: white;
-      margin-top: 40px;
-    }
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family: Arial, sans-serif; line-height:1.6; background:#fff; color:#222;}
+    a {text-decoration:none; color:inherit;}
 
     /* Navbar */
-    .navbar {
-      background-color: #333;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: relative;
-    }
-    .navbar .logo {
-      font-size: 24px;
-      color: #fff;
-      font-weight: bold;
-    }
-    .navbar nav {
-      display: flex;
-      gap: 15px;
-    }
-    .navbar nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 12px;
-      transition: background 0.3s;
-    }
-    .navbar nav a:hover {
-      background-color: #444;
-      border-radius: 5px;
-    }
-    .dropdown { position: relative; display: inline-block; }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 160px;
-      z-index: 1;
-    }
-    .dropdown-content a {
-      color: #fff;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content a:hover { background-color: #444; }
-    .dropdown:hover .dropdown-content { display: block; }
-
-    /* Hamburger Button */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 4px;
-    }
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-    }
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background: #333;
-    }
-    .mobile-nav a {
-      padding: 10px 20px;
-      border-top: 1px solid #444;
-      color: #fff;
-      text-decoration: none;
-    }
-    .mobile-nav a:hover { background: #444; }
-
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      .container { flex-direction: column; }
-      .content { grid-template-columns: 1fr; }
-      .sidebar { width: 100%; }
-      .navbar nav { display: none; }
-      .hamburger { display: flex; }
-      .mobile-nav.active { display: flex; }
+    header {background:#111; color:#fff; position:sticky; top:0; z-index:1000;}
+    .nav-container {display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:0.8rem 1rem;}
+    .logo {font-size:1.5rem; font-weight:bold; color:#facc15;}
+    nav ul {display:flex; list-style:none; gap:1.5rem;}
+    nav li a {color:#fff; font-weight:500;}
+    .hamburger {display:none; flex-direction:column; gap:5px; cursor:pointer;}
+    .hamburger span {width:25px; height:3px; background:#fff; border-radius:2px;}
+    @media(max-width:768px){
+      nav ul {display:none; flex-direction:column; background:#111; position:absolute; top:60px; right:0; width:200px; padding:1rem;}
+      nav ul.active {display:flex;}
+      .hamburger {display:flex;}
     }
 
-    /* Pagination style unchanged */
-    .pagination {
-      text-align: center;
-      margin: 30px 0;
+    /* Hero */
+    .hero {position:relative; height:400px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden;}
+    .hero::before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1;}
+
+    .hero-slideshow {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:0;
     }
-    .pagination a, .pagination span {
-      display: inline-block;
-      padding: 8px 12px;
-      margin: 0 2px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      text-decoration: none;
-      color: #007bff;
-      background: white;
-      transition: background 0.2s;
+
+    .hero-slideshow img {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:blur(5px) brightness(0.6);
+      opacity:0;
+      transition: opacity 1s ease-in-out;
     }
-    .pagination a.active {
-      background: #007bff;
-      color: white;
-      border-color: #007bff;
+
+    .hero-slideshow img.active {opacity:1;}
+
+    .hero-content {position:relative; z-index:2; max-width:700px; padding:0 1rem;}
+    .hero-content h1 {font-size:2.2rem; margin-bottom:0.8rem;}
+    .hero-content p {font-size:1rem; opacity:0.9;}
+
+    /* Sections */
+    section {max-width:1200px; margin:2rem auto; padding:0 1rem;}
+    .section-title {font-size:1.5rem; margin-bottom:1rem; font-weight:bold; border-left:5px solid #facc15; padding-left:10px;}
+    .about-text {max-width:800px; margin:2rem auto; font-size:1.05rem; text-align:justify; color:#444;}
+
+    /* Grid Cards */
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem;}
+    .card {background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:transform 0.2s ease;}
+    .card:hover {transform:translateY(-5px);}
+    .card img {width:100%; height:180px; object-fit:cover;}
+    .card-content {padding:1rem;}
+    .card-content h3 {font-size:1.2rem; margin-bottom:0.5rem;}
+    .card-content p {font-size:0.95rem; color:#555;}
+
+    /* Footer */
+    footer {background:#1e1e1e; color:#fff; padding:40px 20px;}
+    footer h3 {color:#ffcc00; margin-bottom:10px;}
+    footer p, footer a, footer li {color:#ccc; font-size:0.95rem;}
+    footer a:hover {color:#fff;}
+    footer .footer-container {max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between;}
+    footer .footer-column {flex:1; min-width:250px; margin-bottom:20px;}
+    footer ul {list-style:none; padding:0;}
+    footer ul li {margin-bottom:5px;}
+    footer .copyright {text-align:center; border-top:1px solid #444; margin-top:30px; padding-top:20px; color:#aaa;}
+
+    @media(max-width:768px){
+      .hero-content h1 {font-size:1.6rem;}
+      .hero-content p {font-size:0.95rem;}
+      footer .footer-container {flex-direction:column; gap:20px;}
     }
-    .pagination a:hover:not(.active) { background: #f0f0f0; }
-    .pagination span { color: #777; cursor: default; }
   </style>
-  <meta name="google-site-verification" content="7N162RKum3gUuJrdZaZS4qQfjNmGLtziJpW-m925m4M" />
-
 </head>
 <body>
+
+  <!-- Navbar -->
   <header>
-    <h1>Top 10 Verse – Where Every Thing Finds Its Rank</h1>
-    <div class="navbar">
+    <div class="nav-container">
       <div class="logo">Top10Verse</div>
-      <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
-        <div></div><div></div><div></div>
-      </div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="Games.html">Games</a>
-        <a href="apps.html">Apps</a>
-        <a href="Tech.html">Tech</a>
-        <a href="Movies.html">Movies</a>
-        <a href="Health.html">Health</a>
-        <a href="Careers.html">Careers</a>
-      </nav>
-    </div>
-    <div class="mobile-nav">
-      <a href="index.html">Home</a>
-      <a href="Games.html">Games</a>
-      <a href="apps.html">Apps</a>
-      <a href="Tech.html">Tech</a>
-      <a href="Movies.html">Movies</a>
-      <a href="Health.html">Health</a>
-      <a href="Careers.html">Careers</a>
-    </div>
-    <p>Explore top 10s across games, gadgets, apps, and more</p>
-  </header>
-  <div class="container">
-    <!-- Blog Posts -->
-    <div class="content">
-      <div class="post-card">
-        
-        <a href="games/post1.html"><img src="games/images/post1/1.webp" alt=""> </a>
-
-        <div class="post-content">
-          <div class="post-title">Top 10 Best Offline Android Games Under 100MB You Must Play in 2025
-
-          </div>
-          <div class="meta">Explore the top 10 offline Android games under 100MB, offering exciting gameplay, stunning graphics, and endless fun—perfect for saving data and playing anywhere, anytime.
-          </div>
-          <div class="excerpt"></div>
-         
-        </div>
-
-      </div>
-
-    
-      <div class="post-card">
-        <a href="health/post1.html"> <img src="health/images/th.jpg" alt=""></a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Fruits for Glowing Skin and Hair Growth
-          </div>
-          <div class="meta">Top 10 Fruits for Glowing Skin and Hair Growth highlights nutrient-rich fruits that naturally enhance beauty from within. Packed with vitamins, antioxidants, and hydration, these fruits promote clear skin, reduce hair fall, and support healthy, radiant growth when included in your daily diet.
-          </div>
-          <div class="excerpt"></div>
-        </div>
-      </div>
-
-
-      <div class="post-card">
-        <a href="apps/post2.html">
-          <img src="apps/images/post2/1.jpg" alt="Post 2">
-        </a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Best Apps to Learn Coding for Beginners</div>
-          <div class="meta">Explore the top 10 beginner-friendly coding apps that make learning programming fun, interactive, and easy. Whether you're starting with Python, Java, or web development, these apps offer guided lessons, real-time practice, and progress tracking.
-          </div>
-          <div class="excerpt"></div>
-        </div>
-      </div>
-      
-  
-      <div class="post-card">
-        <a href="tech/post3.html">
-          <img src="tech/images/3.jpg" alt="Post 2">
-        </a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Wireless Earbuds under ₹1500</div>
-          <div class="meta">Check out the top wireless earbuds under ₹1500 in 2025, featuring clear sound, decent bass, Bluetooth connectivity, and comfortable design. Perfect for music lovers and casual users seeking affordable audio accessories without sacrificing essential features.
-
-          </div>
-          <div class="excerpt"></div>
-        </div>
-      </div>
-      
-
-
-      
-      <div class="post-card">
-        <a href="Careers/post1.html"><img src="Careers/images/1.jpg" alt=""> </a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Career Options After 12th Science Without NEET</div>
-          <div class="meta"> Top 10 Career Options After 12th Science Without NEET offers students exciting, high-paying fields like nursing, biotechnology, pharmacy, IT, and forensic science—without medical entrance exams. Explore rewarding careers with global scope, stability, and great future growth opportunities.
-          </div>
-          <div class="excerpt"></div>
-        </div>
-      </div>
-
-
-      <div class="post-card">
-        <a href="apps/post6.html">
-          <img src="apps/images/post6/1.jpg" alt="Post 2">
-        </a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Free Time Management Apps for Students</div>
-          <div class="meta">
-            Top 10 Free Time Management Apps for Students presents the best tools to help students organize their schedules, set study goals, and boost productivity. These apps offer reminders, to-do lists, and calendar features—perfect for staying focused and managing academic life efficiently.
-          </div>
-          <div class="excerpt"></div>
-        </div>
-      </div>
-
-
-
-      
-        
-  <div class="post-card">
-    <a href="movies/post2.html">
-      <img src="movies/images/2.jpg" alt="Post 2">
-    </a>
-    <div class="post-content">
-      <div class="post-title">Top 10 Motivational Movies 2025</div>
-      <div class="meta">
-        Top 10 Motivational Movies 2025 features inspiring films that uplift and empower—from personal triumphs and social challenges to stories of resilience and transformation. These movies motivate viewers with stirring performances and meaningful narratives that ignite hope and drive positive change.
-      </div>
-      <div class="excerpt"></div>
-    </div>
-  </div>
-
-
-
-     
-      <div class="post-card">
-        <a href="health/post4.html">
-          <img src="health/images/4.jpg" alt="Post 2">
-        </a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Ways to Boost Your Immune System Naturally</div>
-          <div class="meta">Top 10 Ways to Boost Your Immune System Naturally highlights effective lifestyle habits like eating nutritious foods, staying active, managing stress, and getting enough sleep. These natural methods strengthen your body’s defenses, helping you stay healthy and fight off infections.
-
-          </div>
-          <div class="excerpt"></div>
-        </div>
-      </div>
-
-     
-  <div class="post-card">
-    <a href="tech/post2.html">
-      <img src="tech/images/2.jpg" alt="Post 2">
-    </a>
-    <div class="post-content">
-      <div class="post-title"> Top 10 Budget Smartphones Under ₹10000 in 2025:</div>
-      <div class="meta">Explore the best budget smartphones under ₹10,000 in 2025, offering impressive performance, HD displays, long-lasting batteries, and powerful cameras. Ideal for students and budget-conscious users seeking great features without compromising on quality or user experience.
-      </div>
-      <div class="excerpt"></div>
-    </div>
-  </div>
-
-
-      <div class="post-card">
-        <a href="games/post9.html"> <img src="games/images/post9/2.jpg" alt="Post 9"></a>
-        <div class="post-content">
-          <div class="post-title">Top 10 Free Survival Games for PC on Steam</div>
-          <div class="meta">Explore the best free survival games on Steam for PC players. From crafting and base-building to zombie hordes and harsh environments, these titles offer thrilling survival experiences without costing a dime.</div>
-          <div class="excerpt">.</div>
-        </div>
-      </div>
-
-      
-    </div>
-
-
-
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-section">
-        <form id="searchForm" action="/search.html" method="GET">
-          <input type="text" id="searchInput" name="q" placeholder="Search..." required>
-          <button type="submit">Search</button>
-        </form>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Recently Published</h3>
         <ul>
-        
-          <li><a href="apps/post2.html"><h3>Top 10 Best Apps to Learn Coding for Beginners</h3></a></li>
-          <li><a href="Careers/post1.html"><h3>Top 10 Career Options After 12th Science Without NEET</h3></a></li>
-          <li><a href="games/post1.html"><h3>🎮 Top 10 Adventure Games Under 200MB (2025)</h3></a></li>
-          <li><a href="tech/post2.html"><h3>Top 10 Budget Smartphones Under ₹10000 in 2025:</h3></a></li>
-          <li><a href="games/post2.html"><h3>🎮 Top 10 Assassin’s Creed Games Under 10 GB</h3></a></li>
-  
-          </ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Games.html">Games</a></li>
+          <li><a href="Tech.html">Tech</a></li>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="Health.html">Health</a></li>
+                 <li><a href="About Us.html">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')">
+        <span></span><span></span><span></span>
       </div>
-    </aside>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-slideshow">
+      <img src="games/images/post.2/1.avif" alt="Slide 1">
+      <img src="apps/images/post2/1.jpg" alt="Slide 2">
+      <img src="tech/images/2.jpg" alt="Slide 3">
+    </div>
+    <div class="hero-content">
+      <h1>Welcome to Top10Verse</h1>
+      <p>Your one-stop destination for the best curated top 10 lists across games, tech, apps, and health. Explore trending topics and discover something new every day.</p>
+    </div>
+  </section>
+
+  <!-- Popular Picks -->
+  <section>
+    <h2 class="section-title">🔥 Popular Picks</h2>
+    <div class="grid">
+      <article class="card">
+       <a href="games/top-10-best-offline-android-games-under-100mb-you-must-play-in-2025.html"> <img src="games/images/post1/1.webp" alt="Post 1"></a>
+        <div class="card-content">
+          <h3>Top 10 Offline Android Games</h3>
+          <p>Explore the top 10 offline Android games under 100MB, offering exciting gameplay, stunning graphics, and endless fun—perfect for saving data and playing anywhere, anytime.</p>
+        </div>
+      </article>
+      <article class="card">
+       <a href="apps/post2.html"> <img src="apps/images/post2/1.jpg" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Best Apps to Learn Coding for Beginners</h3>
+          <p>Explore the top 10 beginner-friendly coding apps that make learning programming fun, interactive, and easy. Whether you're starting with Python, Java, or web development, these apps offer guided lessons, real-time practice, and progress tracking.</p>
+        </div>
+      </article>
+      <article class="card">
+       <a href="health/post1.html"> <img src="health/images/th.jpg" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Fruits for Glowing Skin and Hair Growth</h3>
+          <p>Top 10 Fruits for Glowing Skin and Hair Growth highlights nutrient-rich fruits that naturally enhance beauty from within. Packed with vitamins, antioxidants, and hydration, these fruits promote clear skin, reduce hair fall, and support healthy, radiant growth when included in your daily diet.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <div class="about-text">
+    <p>Top10Verse isn’t just another blog – it’s a place built for curious minds. We dig through endless options, reviews, and updates to bring you the very best of everything. Whether it’s the latest gaming titles, the coolest tech gadgets, or must-have apps, we focus on what actually matters so you can spend less time searching and more time enjoying. Our goal is simple: make decision-making easier, faster, and fun.</p>
   </div>
 
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Pagination</title>
-    <style>
-      .pagination {
-        text-align: center;
-        margin: 30px 0;
-      }
-  
-      .pagination a, .pagination span {
-        display: inline-block;
-        padding: 8px 12px;
-        margin: 0 2px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        text-decoration: none;
-        color: #007bff;
-        background: white;
-        transition: background 0.2s;
-      }
-  
-      .pagination a.active {
-        background: #007bff;
-        color: white;
-        border-color: #007bff;
-      }
-  
-      .pagination a:hover:not(.active) {
-        background: #f0f0f0;
-      }
-  
-      .pagination span {
-        color: #777;
-        cursor: default;
-      }
-    </style>
-  </head>
-  <body>
-  
-    <div class="pagination">
-      <a href="Games.html" data-page="1">1</a>
-      <a href="2.html" data-page="2">2</a>
-      <a href="3.html" data-page="3">3</a>
-      <a href="" data-page="4">4</a>
-      <a href="" data-page="50">5</a>
-      <a href="">&gt;</a>
+  <!-- Recent Posts -->
+  <section>
+    <h2 class="section-title">🆕 Recent Posts</h2>
+    <div class="grid">
+     <article class="card">
+       <a href="tech/Top 10 Brokers for Forex Trading (2025).html"> <img src="tech/images/4.webp" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Brokers for Forex Trading (2025)</h3>
+          <p>"Discover the top 10 forex brokers for 2025, featuring low spreads, reliable regulation, advanced trading platforms, fast execution, and features designed to suit both beginner and professional traders."</p>
+        </div>
+      </article>
+      <article class="card">
+       <a href="games/post2.html"> <img src="games/images/post.2/1.avif" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>🎮 Top 10 Assassin’s Creed Games Under 10 GB</h3>
+          <p>Top 10 Assassin’s Creed Games Under 10 GB — Explore the best lightweight AC titles packed with action, stealth, and history, perfect for low-end PCs and nostalgic gamers.</p>
+        </div>
+      </article>
+     <article class="card">
+       <a href="tech/post2.html"> <img src="tech/images/2.jpg" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Budget Smartphones Under ₹10000 in 2025:</h3>
+          <p>Explore the best budget smartphones under ₹10,000 in 2025, offering impressive performance, HD displays, long-lasting batteries, and powerful cameras. Ideal for students and budget-conscious users seeking great features without compromising on quality or user experience</p>
+        </div>
+      </article>
+     <article class="card">
+       <a href="health/post4.html"> <img src="health/images/4.jpg" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Ways to Boost Your Immune System Naturally</h3>
+          <p>Top 10 Ways to Boost Your Immune System Naturally highlights effective lifestyle habits like eating nutritious foods, staying active, managing stress, and getting enough sleep. These natural methods strengthen your body’s defenses, helping you stay healthy and fight off infections.</p>
+        </div>
+      </article>
+      <article class="card">
+       <a href="tech/post3.html"> <img src="tech/images/3.jpg" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Wireless Earbuds under ₹1500</h3>
+          <p>Check out the top wireless earbuds under ₹1500 in 2025, featuring clear sound, decent bass, Bluetooth connectivity, and comfortable design. Perfect for music lovers and casual users seeking affordable audio accessories without sacrificing essential features.</p>
+        </div>
+      </article>
+      <article class="card">
+       <a href="apps/post3.html"> <img src="apps/images/post3/1.jpg" alt="Post 2"></a>
+        <div class="card-content">
+          <h3>Top 10 Offline Yoga Apps for Beginners (2025)</h3>
+          <p>Top 10 Offline Yoga Apps for Beginners (2025) highlights the best apps that offer guided yoga sessions without needing internet access. Ideal for home practice, these apps include video tutorials, pose instructions, and beginner-friendly routines for a healthy start.</p>
+        </div>
+      </article>
     </div>
-    
+  </section>
+
+  <section id="about-top10verse" aria-labelledby="about-top10verse-title" style="background:#fff;border-radius:8px;padding:20px;margin-top:30px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <h2 id="about-top10verse-title" style="color:#0077cc;margin-top:0;">About Top10Verse — What We Offer</h2>
+
+  <p style="line-height:1.7;margin-bottom:12px;">
+    Top10Verse is your friendly navigator through the noisy world of choices. We publish carefully researched, easy-to-read “Top 10” lists across tech, apps, games, health, movies and lifestyle — so you save time and make smarter decisions. Every list is created to be practical, up-to-date and human-first: our writers test products, compare features, and explain the real pros and cons in plain language.
+  </p>
+
+  <p style="line-height:1.7;margin-bottom:12px;">
+    Our goal is simple: help you discover the best options quickly — whether you’re hunting for a budget phone, a workout app that works offline, or the best games under 200MB. We blend hands-on testing, user feedback, and current pricing/availability to deliver recommendations that you can trust.
+  </p>
+
+  <h3 style="margin:10px 0 8px;color:#0056b3;font-size:1rem;">What you get on Top10Verse</h3>
+  <ul style="line-height:1.7;margin-left:18px;margin-bottom:12px;">
+    <li><strong>Curated lists:</strong> Bite-sized rankings that highlight value, performance and features.</li>
+    <li><strong>Clear buying tips:</strong> Quick guidance on who each product is best for.</li>
+    <li><strong>Hands-on insights:</strong> Real testing notes, pros & cons and alternatives.</li>
+    <li><strong>Mobile-first content:</strong> Lightweight pages that load fast on phones.</li>
+    <li><strong>Offline-friendly recommendations:</strong> Apps and tools that work without constant internet.</li>
+  </ul>
+
+  <p style="line-height:1.7;margin-bottom:12px;">
+    We update our guides regularly — look for the year in each post title (e.g., “2025”) so you know it’s fresh. If you want something specific tested or a list tailored to your budget, <a href="Contact Us.html" style="color:#0077cc;text-decoration:underline;">leave us a request</a> — we’ll research it and publish the results.
+  </p>
+
   
-  <script>
-    // Detect current page from URL
-    const links = document.querySelectorAll('.pagination a[data-page]');
-    let currentPage = 1;
-  
-    const path = window.location.pathname;
-    const filename = path.substring(path.lastIndexOf('/') + 1);
-  
-    if (filename !== 'index.html' && filename !== '') {
-      const match = filename.match(/^(\d+)\.html$/);
-      if (match) {
-        currentPage = parseInt(match[1]);
-      }
-    }
-  
-    // Highlight current page
-    links.forEach(link => {
-      if (parseInt(link.dataset.page) === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  </script>
-  <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
-    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
-      
-      <!-- About Us -->
-      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
-        <h3 style="color: #ffcc00;">About Top10Verse</h3>
-        <p style="line-height: 1.6;">
-          Top10Verse is your go-to platform for discovering top 10 lists across categories like apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.
-        </p>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Top10Verse</h3>
+        <p>Top10Verse is your go-to platform for discovering top 10 lists across apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.</p>
       </div>
-  
-      <!-- Quick Links -->
-      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-        <h3 style="color: #ffcc00;">Quick Links</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
-          <li><a href="About Us.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
-          <li><a href="Contact Us.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
-          <li><a href="Privacy Policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
-          <li><a href="Disclaimer.html" style="color: #ccc; text-decoration: none;">Disclaimer</a></li>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+          <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
         </ul>
       </div>
-  
-      <!-- Contact Info -->
-      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
-        <h3 style="color: #ffcc00;">Contact Us</h3>
-        <p>Email: <a href="mailto:mehtabsingh2k7@gmail.com" style="color: #ccc;">mehtabsingh2k7@gmail.com</a></p>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:mehtabsingh2k7@gmail.com">mehtabsingh2k7@gmail.com</a></p>
         <p>Location: India</p>
         <p>Available: Mon - Sat, 10AM - 6PM</p>
       </div>
-  
-      <!-- Social Media -->
-      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-        <h3 style="color: #ffcc00;">Follow Us</h3>
-        <a href="https://www.instagram.com/mehtab_767_/?next=%2Fhghh1152%2F" style="color: #ccc; text-decoration: none; margin-right: 10px;">Instagram</a><br>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <a href="https://www.instagram.com/mehtab_767_/?next=%2Fhghh1152%2F">Instagram</a>
       </div>
     </div>
-  
-    <!-- Copyright -->
-    <div style="text-align: center; border-top: 1px solid #444; margin-top: 30px; padding-top: 20px;">
-      <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
+    <div class="copyright">
+      <p>&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
     </div>
   </footer>
 
+  <!-- Hero Slideshow Script -->
   <script>
-    // Toggle mobile nav menu
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.mobile-nav').classList.remove('active');
-      });
-    });
+    const slides = document.querySelectorAll('.hero-slideshow img');
+    let current = 0;
+    slides[current].classList.add('active');
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000); // 3 seconds per slide
   </script>
+
 </body>
 </html>
-
