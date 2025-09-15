@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://www.top10verse.xyz/" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2GPFF7J4Z8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2GPFF7J4Z8');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top10 Blog Grid</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .content {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: scale(1.02);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 15px;
+    }
+
+    .post-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .excerpt {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .sidebar {
+      flex: 1;
+    }
+
+    .sidebar-section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-section h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .sidebar-section input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    .sidebar-section button {
+      width: 100%;
+      padding: 8px;
+      background-color: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar-section li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar-section a {
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+
+   
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .content { grid-template-columns: 1fr; }
+      .sidebar { width: 100%; }
+      .navbar nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+    }
+ h1{text-align: center;}
+p{text-align: center;}
+nav li a.active {
+  color:#facc15; /* highlight the active page link */
+  font-weight:700;
+}
+
+  </style>
+</head>
+<body>
+
+
+  
+  <!-- Navbar -->
+<header>
+  <div class="nav-container">
+    <div class="logo">Top10Verse</div>
+    <nav>
+      <ul>
+        <li><a href="index.html"  >Home</a></li>
+        <li><a href="Games.html"class="active">Games</a></li>
+        <li><a href="Tech.html">Tech</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="Health.html">Health</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+ 
+<!-- Navbar CSS -->
+<style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  header {background:#111; color:#fff; position:sticky; top:0; z-index:1000;}
+  .nav-container {
+    display:flex; justify-content:space-between; align-items:center;
+    max-width:1200px; margin:auto; padding:0.8rem 1rem;
+  }
+  .logo {font-size:1.5rem; font-weight:bold; color:#facc15;}
+  nav ul {display:flex; list-style:none; gap:1.5rem;}
+  nav li a {color:white; font-weight:500; text-decoration: none;}
+  .hamburger {display:none; flex-direction:column; gap:5px; cursor:pointer;}
+  .hamburger span {width:25px; height:3px; background:#fff; border-radius:2px;}
+  
+  @media(max-width:768px){
+    nav ul {
+      display:none; flex-direction:column; background:#111;
+      position:absolute; top:60px; right:0; width:200px; padding:1rem;
+    }
+    nav ul.active {display:flex;}
+    .hamburger {display:flex;}
+  }
+</style>
+ <h1>Gaming Excellence, Ranked for You</h1>
+    <p>Explore top 10s across games, gadgets, apps, and more</p>
+ 
+  <div class="container">
+    <!-- Blog Posts -->
+    <div class="content">
+      
+      <div class="post-card">
+        <a href="games/Adventure Games Under 200MB.html"> <img src="games/images/post3/1.webp" alt="Post 3"></a>
+        <div class="post-content">
+          <div class="post-title">🎮 Top 10 Adventure Games Under 200MB (2025)</div>
+          <div class="meta">Looking for thrilling adventures without draining your data or device storage? We've handpicked the Top 10 Adventure Games under 200MB that pack gripping stories, clever puzzles, and immersive gameplay into small download sizes. Whether you're exploring mysterious lands, solving ancient riddles, or embarking on epic quests, these lightweight games deliver big excitement on a budget. </div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="games/offline adventure games.html"> <img src="games/images/post4/1.webp" alt="Post 4"></a>
+        <div class="post-content">
+          <div class="post-title">🎮 Top 10 Offline Adventure Games for Android (2025)</div>
+          <div class="meta">🎮 Top 10 Offline Adventure Games for Android (2025):
+            Explore epic quests and mysterious worlds with these offline Android adventure games under 200MB. No internet needed—just thrilling stories, smart puzzles, and immersive gameplay wherever you go!</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="games/Adventure Games Under 1GB.html"> <img src="games/images/post5/2.webp" alt="Post 5"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Action Adventure Games Under 1GB (Android – 2025)</div>
+          <div class="meta">Explore the Top 10 Action Adventure Games Under 1GB for Android in 2025. These thrilling games deliver intense action, immersive adventures, and impressive graphics—all while keeping storage use below 1GB. Perfect for gamers on the go!
+</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="games/Survival Games Like Last Day on Earth.html"> <img src="games/images/post6/1.webp" alt="Post 6"></a>
+        <div class="post-content">
+          <div class="post-title">🔥 Top 10 Survival Games Like Last Day on Earth (Android – 2025)</div>
+          <div class="meta">🔥 Discover the Top 10 Survival Games Like Last Day on Earth for Android in 2025! Packed with crafting, zombie battles, and base-building, these intense survival adventures offer the ultimate challenge under 1GB.
+
+          </div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="games/Zombie Survival Games Under 100MB .html"> <img src="games/images/post7/1.webp" alt="Post 7"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Zombie Survival Games Under 100MB (Android – 2025)</div>
+          <div class="meta">🧟‍♂️ Explore the Top 10 Zombie Survival Games Under 100MB for Android in 2025! These lightweight yet thrilling games deliver intense zombie action, survival challenges, and gripping gameplay—all without hogging your storage.</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <a href="games/Open World PC Games Under 5GB.html"> <img src="games/images/post8/1.jpg" alt="Post 8"></a>
+        <div class="post-content">
+          <div class="post-title">Top 10 Open World PC Games Under 5GB
+          </div>
+          <div class="meta">Top 10 Open World PC Games Under 5GB
+            Discover the best open-world PC games under 5GB that offer vast exploration, engaging gameplay, and immersive stories—perfect for low-spec systems without compromising fun, freedom, or adventure-packed experiences.</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+
+      
+
+      <div class="post-card">
+        <a href="games/shooting games for 4gb ram pc.html"> <img src="games/images/post10/2.jpg" alt="Post 10"></a>
+        <div class="post-content">
+          <div class="post-title">10 Best Shooting Games for 4GB RAM PC</div>
+          <div class="meta">10 Best Shooting Games for 4GB RAM PC: Smooth, Action-Packed Titles That Run Great on Low-End Systems
+            Explore thrilling first and third-person shooters that deliver intense gameplay, engaging stories, and solid performance on PCs with just 4GB RAM—no high-end hardware required.</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+  
+<div class="post-card">
+        <a href="games/post.11.html"> <img src="games/images/post11/1.webp" alt="Post 10"></a>
+        <div class="post-content">
+          <div class="post-title">🎮 Top 10 Puzzle Games For Android</div>
+          <div class="meta">Discover the top 10 puzzle games for Android that challenge your mind, boost creativity, and offer hours of fun. Perfect for all ages, these games blend strategy, logic, and entertainment seamlessly.</div>
+          <div class="excerpt"></div>
+        </div>
+      </div>
+  
+     
+</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <form id="searchForm" action="/search.html" method="GET">
+          <input type="text" id="searchInput" name="q" placeholder="Search..." required>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Recently Published</h3>
+        <ul>
+          <li><a href="page1/post3.html"><h3>🎮 Top 10 Adventure Games Under 200MB (2025)</h3></a></li>
+        <li><a href="page1/post1.html"><h3>Top 10 Best Offline Android Games Under 100MB You Must Play in 2025</h3></a></li>
+        <li><a href="page1/post7.html"><h3>Top 10 Zombie Survival Games Under 100MB (Android – 2025)</h3></a></li>
+        <li><a href="page1/post2.html"><h3>🎮 Top 10 Assassin’s Creed Games Under 10 GB</h3></a></li>
+        <li><a href="page1/post5.html"><h3>Top 10 Action Adventure Games Under 1GB (Android – 2025)</h3></a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <style>
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+  
+    .pagination a, .pagination span {
+      display: inline-block;
+      padding: 8px 12px;
+      margin: 0 2px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      text-decoration: none;
+      color: #007bff;
+      background: white;
+      transition: background 0.2s;
+    }
+  
+    .pagination a.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+  
+    .pagination a:hover:not(.active) {
+      background: #f0f0f0;
+    }
+  
+    .pagination span {
+      color: #777;
+      cursor: default;
+    }
+  </style>
+  
+
+  
+  <footer style="background-color:#1e1e1e; color:#fff; padding: 40px 20px;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <!-- About Us -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">About Top10Verse</h3>
+        <p style="line-height: 1.6;">
+          Top10Verse is your go-to platform for discovering top 10 lists across categories like apps, games, movies, gadgets, careers, and health. We deliver well-researched, humanized content to help you make informed choices quickly and easily.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+          <li><a href="About Us.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+          <li><a href="Contact Us.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+          <li><a href="Privacy Policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html" style="color: #ccc; text-decoration: none;">Disclaimer</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Contact Us</h3>
+        <p>Email: <a href="mailto:mehtabsingh2k7@gmail.com" style="color: #ccc;">mehtabsingh2k7@gmail.com</a></p>
+        <p>Location: India</p>
+        <p>Available: Mon - Sat, 10AM - 6PM</p>
+      </div>
+  
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+        <h3 style="color: #ffcc00;">Follow Us</h3>
+        <a href="https://www.instagram.com/mehtab_767_/?next=%2Fhghh1152%2F" style="color: #ccc; text-decoration: none; margin-right: 10px;">Instagram</a><br>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div style="text-align: center; border-top: 1px solid #444; margin-top: 30px; padding-top: 20px;">
+      <p style="color: #aaa;">&copy; 2025 Top10Verse.xyz | All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
